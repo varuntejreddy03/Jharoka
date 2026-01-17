@@ -120,7 +120,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative w-[80%] sm:w-full max-w-sm lg:max-w-md aspect-[3/4.5] -mt-12 lg:-mt-20"
+              className="relative w-[80%] sm:w-full max-w-sm lg:max-w-md aspect-[3/4.5] mt-8 lg:-mt-20"
             >
               {/* Clean Arch Frame */}
               <div className="relative w-full h-full rounded-t-full border-[6px] lg:border-[8px] border-white shadow-2xl overflow-hidden bg-[#E5E0D8]">

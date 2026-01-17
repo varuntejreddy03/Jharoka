@@ -36,15 +36,15 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out",
           isScrolled
-            ? "bg-jharoka-cream/95 backdrop-blur-xl shadow-sm border-b border-jharoka-burgundy/8 py-4"
-            : "bg-transparent py-6"
+            ? "bg-transparent lg:bg-jharoka-cream/95 backdrop-blur-none lg:backdrop-blur-xl shadow-none lg:shadow-sm border-none lg:border-b lg:border-jharoka-burgundy/8 py-3 lg:py-4"
+            : "bg-transparent py-4 lg:py-6"
         )}
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-6 group relative z-10">
-            <div className="relative w-16 h-16 rounded-full overflow-hidden bg-white shadow-xl border-2 border-jharoka-burgundy/20 group-hover:border-jharoka-burgundy/60 transition-all duration-500 group-hover:shadow-2xl">
+          <Link href="/" className="flex items-center gap-3 lg:gap-6 group relative z-10 bg-white/90 lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none border border-jharoka-burgundy/10 lg:border-none rounded-full lg:rounded-none pr-5 pl-1 py-1 lg:p-0 shadow-sm lg:shadow-none">
+            <div className="relative w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden bg-white shadow-none group-hover:shadow-md border-0 group-hover:border-jharoka-burgundy/20 transition-all duration-500">
               <Image
                 src="/logo.png"
                 alt="Jharoka"
@@ -53,7 +53,7 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-4xl font-bold text-jharoka-burgundy-900 leading-none tracking-tight group-hover:text-jharoka-burgundy transition-colors duration-300">
+              <span className="font-serif text-xl lg:text-4xl font-bold text-jharoka-burgundy-900 leading-none tracking-tight group-hover:text-jharoka-burgundy transition-colors duration-300">
                 Jharoka
               </span>
               <span className="hidden sm:block text-xs font-semibold tracking-[0.3em] uppercase text-jharoka-burgundy/80 mt-1 group-hover:text-jharoka-burgundy transition-colors duration-300">
@@ -101,7 +101,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 text-jharoka-burgundy-900 hover:text-jharoka-burgundy transition-colors duration-300"
+            className="lg:hidden p-3 bg-white/90 backdrop-blur-sm rounded-full text-jharoka-burgundy-900 shadow-md hover:text-jharoka-burgundy transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <Menu className="w-6 h-6" />
