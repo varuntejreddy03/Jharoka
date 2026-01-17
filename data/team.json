@@ -1,0 +1,16 @@
+[
+  {
+    "id": "t1",
+    "name": "Arjun Singhania",
+    "role": "Principal Architect",
+    "image": "https://randomuser.me/api/portraits/men/1.jpg",
+    "bio": "Over 20 years of experience in heritage conservation and modern architecture."
+  },
+  {
+    "id": "t2",
+    "name": "Meera Reddy",
+    "role": "Lead Interior Designer",
+    "image": "https://randomuser.me/api/portraits/women/2.jpg",
+    "bio": "Specializes in textile fusion and sustainable material palettes."
+  }
+]

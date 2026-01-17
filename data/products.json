@@ -1,0 +1,97 @@
+[
+  {
+    "id": "bed-001",
+    "name": "Heritage Platform Bed",
+    "category": "Bedroom",
+    "price": 125000,
+    "heroImage": "/productpics/bed1.png",
+    "images": {
+      "gallery": ["/productpics/bed2.png"],
+      "details": ["/productpics/Gemini_Generated_Image_nx8bxinx8bxinx8b.png"],
+      "lifestyle": []
+    },
+    "description": "Handcrafted platform bed with traditional joinery and contemporary lines. Features solid teak construction with brass hardware details.",
+    "collection": "Modern Minimalist",
+    "material": "Solid Teak, Brass Hardware",
+    "dimensions": "King: 84\" x 78\" x 42\" | Queen: 84\" x 66\" x 42\"",
+    "features": ["Solid wood construction", "Traditional joinery", "No screws or nails", "Natural oil finish"],
+    "inStock": true,
+    "deliveryTime": "8-10 weeks"
+  },
+  {
+    "id": "sofa-large-001",
+    "name": "Royal Green Sectional Sofa",
+    "category": "Living Room",
+    "price": 185000,
+    "heroImage": "/productpics/bigsofa1.png",
+    "images": {
+      "gallery": ["/productpics/bigsofa2.png"],
+      "details": ["/productpics/Gemini_Generated_Image_fqvj4kfqvj4kfqvj.png"],
+      "lifestyle": []
+    },
+    "description": "Luxurious sectional sofa upholstered in premium emerald velvet. Features deep seating with high-density foam and traditional button tufting.",
+    "collection": "Royal Rajasthan",
+    "material": "Velvet Upholstery, Hardwood Frame, High-Density Foam",
+    "dimensions": "L: 108\" x W: 84\" x H: 32\"",
+    "features": ["Premium velvet upholstery", "Button tufted details", "Hardwood frame", "Removable cushions"],
+    "inStock": true,
+    "deliveryTime": "6-8 weeks"
+  },
+  {
+    "id": "sofa-small-001",
+    "name": "Striped Accent Chairs (Set of 2)",
+    "category": "Seating",
+    "price": 95000,
+    "heroImage": "/productpics/smallsofa1.png",
+    "images": {
+      "gallery": ["/productpics/smallsofa2.png"],
+      "details": ["/productpics/Gemini_Generated_Image_1bnbtu1bnbtu1bnb.png"],
+      "lifestyle": []
+    },
+    "description": "Elegant pair of accent chairs with hand-woven striped upholstery. Perfect for creating conversation areas with traditional charm.",
+    "collection": "Heritage Weaves",
+    "material": "Handwoven Cotton, Teak Frame",
+    "dimensions": "W: 28\" x D: 30\" x H: 34\" (each chair)",
+    "features": ["Handwoven fabric", "Solid teak frame", "Ergonomic design", "Set of 2 chairs"],
+    "inStock": true,
+    "deliveryTime": "4-6 weeks"
+  },
+  {
+    "id": "sofa-pink-001",
+    "name": "Blush Pink Loveseat",
+    "category": "Living Room",
+    "price": 85000,
+    "heroImage": "/productpics/sofapink1.png",
+    "images": {
+      "gallery": ["/productpics/Gemini_Generated_Image_57bty357bty357bt.png"],
+      "details": [],
+      "lifestyle": ["/productpics/Gemini_Generated_Image_phb0lgphb0lgphb0.png"]
+    },
+    "description": "Sophisticated loveseat in soft blush pink upholstery. Features curved arms and plush seating for intimate spaces.",
+    "collection": "Urban Oasis",
+    "material": "Linen Blend Upholstery, Ash Wood Frame",
+    "dimensions": "W: 58\" x D: 32\" x H: 30\"",
+    "features": ["Soft linen blend fabric", "Curved arm design", "Plush cushioning", "Compact size"],
+    "inStock": true,
+    "deliveryTime": "5-7 weeks"
+  },
+  {
+    "id": "dining-001",
+    "name": "Heritage Dining Table Set",
+    "category": "Dining Room",
+    "price": 225000,
+    "heroImage": "/productpics/2table1.png",
+    "images": {
+      "gallery": ["/productpics/2table2.png"],
+      "details": ["/productpics/Gemini_Generated_Image_nci281nci281nci2.png"],
+      "lifestyle": []
+    },
+    "description": "Exquisite dining set featuring hand-carved table with brass inlay work and matching chairs. Seats 6-8 people comfortably.",
+    "collection": "Royal Rajasthan",
+    "material": "Reclaimed Teak, Brass Inlay, Handwoven Seats",
+    "dimensions": "Table: 96\" x 42\" x 30\" | Chairs: 18\" x 20\" x 36\"",
+    "features": ["Hand-carved details", "Brass inlay work", "Seats 6-8 people", "Matching chair set"],
+    "inStock": true,
+    "deliveryTime": "10-12 weeks"
+  }
+]

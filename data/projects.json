@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "title": "Rajasthani Heritage Villa",
+    "category": "Luxury Residential",
+    "image": "/productpics/bigsofa2.png",
+    "location": "Jaipur",
+    "year": "2023",
+    "size": "8,500 sq ft",
+    "description": "Complete restoration of 200-year-old haveli with custom teak furniture and traditional brass inlay work"
+  },
+  {
+    "id": "2",
+    "title": "Luxury Resort Suites",
+    "category": "Hospitality",
+    "image": "/productpics/bed2.png",
+    "location": "Udaipur",
+    "year": "2023",
+    "size": "25 Suites",
+    "description": "Bespoke furniture for 5-star heritage resort featuring Royal Rajasthan collection pieces"
+  },
+  {
+    "id": "3",
+    "title": "Contemporary Penthouse",
+    "category": "Modern Residential",
+    "image": "/productpics/smallsofa2.png",
+    "location": "Hyderabad",
+    "year": "2024",
+    "size": "4,200 sq ft",
+    "description": "Modern Minimalist collection with custom storage solutions and heritage accent pieces"
+  },
+  {
+    "id": "4",
+    "title": "Corporate Headquarters",
+    "category": "Commercial",
+    "image": "/productpics/2table2.png",
+    "location": "Bangalore",
+    "year": "2023",
+    "size": "12,000 sq ft",
+    "description": "Executive boardroom furniture and reception area with Urban Oasis collection elements"
+  }
+]

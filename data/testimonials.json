@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Kapoor",
+    "role": "Heritage Villa Owner, New Delhi",
+    "avatar": "https://randomuser.me/api/portraits/women/63.jpg",
+    "quote": "Jharoka transformed our ancestral home into a modern masterpiece while preserving its soul. The attention to detail in every piece of custom furniture is unmatched.",
+    "project": "Heritage Villa Restoration",
+    "projectYear": "2023",
+    "projectValue": "₹35L+"
+  },
+  {
+    "id": 2,
+    "name": "Rajesh Singh",
+    "role": "Resort Owner, Jaipur",
+    "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+    "quote": "The team's understanding of heritage architecture and modern hospitality needs helped us create a property that guests fall in love with instantly. Every piece tells a story.",
+    "project": "Luxury Resort Interiors",
+    "projectYear": "2023",
+    "projectValue": "₹85L+"
+  },
+  {
+    "id": 3,
+    "name": "Ananya Desai",
+    "role": "Creative Director, Mumbai",
+    "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+    "quote": "Working with Jharoka was a seamless experience. They brought my vision of contemporary luxury with Indian heritage to life with elegance and sophistication.",
+    "project": "Penthouse Interior Design",
+    "projectYear": "2024",
+    "projectValue": "₹25L+"
+  }
+]

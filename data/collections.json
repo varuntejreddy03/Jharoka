@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "title": "Royal Rajasthan",
+    "slug": "royal-rajasthan",
+    "image": "/productpics/2table1.png",
+    "description": "Inspired by the palaces of Udaipur, this collection brings regality to your living room.",
+    "story": "Echoing the grandeur of the City of Lakes, each piece in this collection is handcrafted by third-generation artisans. We use reclaimed teak from old havelis and inlay it with brass and mother of pearl.",
+    "specs": {
+      "Material": "Reclaimed Teak & Brass",
+      "Finish": "Antique Matte",
+      "Origin": "Udaipur, India"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Modern Minimalist",
+    "slug": "modern-minimalist",
+    "image": "/productpics/bed1.png",
+    "description": "Clean lines meeting warm textures for the contemporary Indian home.",
+    "story": "Designed for the urban dweller who seeks unmatched tranquility. This collection strips away the unnecessary, focusing on form, function, and the inherent beauty of natural wood grains.",
+    "specs": {
+      "Material": "White Oak & Linen",
+      "Finish": "Natural Oil",
+      "Origin": "Designed in Hyderabad"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Heritage Weaves",
+    "slug": "heritage-weaves",
+    "image": "/productpics/sofapink1.png",
+    "description": "Upholstery and textiles that tell a story of ancient looms.",
+    "story": "We partner with weaver communities in Warangal and Pochampally to create proprietary fabrics that adorn our sofas and chairs. It is not just furniture; it is wearable art for your home.",
+    "specs": {
+      "Material": "Handspun Cotton & Silk",
+      "Technique": "Ikat & Jamdani",
+      "Origin": "Telangana, India"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Urban Oasis",
+    "slug": "urban-oasis",
+    "image": "/productpics/smallsofa1.png",
+    "description": "Bringing the serenity of nature indoors with organic shapes.",
+    "story": "Soft curves, cane webbing, and planter integration define this collection. It is meant to blur the lines between your balcony and your living room, creating a breathing space in the concrete jungle.",
+    "specs": {
+      "Material": "Rattan & Ash Wood",
+      "Finish": "Honey Glaze",
+      "Origin": "Assam, India"
+    }
+  }
+]
