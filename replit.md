@@ -76,7 +76,8 @@ npm run start
 
 ## Recent Changes
 - **Jan 2026**: UI/UX improvements
-  - Simplified Hero to video-only arch display with play/pause and mute controls
+  - Hero redesign with "Crafting Legacies in Wood & Time" headline
+  - Video arch with fallback image, "Handcrafted Excellence" and "Est. 1999" badges
   - Updated color palette with warmer browns (#2C1810, #8B4513, #D4A574)
   - Changed heading font from Oswald to Playfair Display for elegance
   - Added global utility classes for consistent styling (section-padding, section-header, btn-primary, etc.)
