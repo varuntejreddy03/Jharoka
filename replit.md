@@ -75,10 +75,15 @@ npm run start
 - `postcss.config.mjs` - PostCSS with Tailwind
 
 ## Recent Changes
+- **Jan 2026**: UI/UX improvements
+  - Simplified Hero to video-only arch display with play/pause and mute controls
+  - Updated color palette with warmer browns (#2C1810, #8B4513, #D4A574)
+  - Changed heading font from Oswald to Playfair Display for elegance
+  - Added global utility classes for consistent styling (section-padding, section-header, btn-primary, etc.)
 - **Jan 2026**: Homepage redesign with category-first approach
   - Replaced FeaturedCollections carousel with CategoryCircles component
   - New "Shop by Category" section showing all 6 categories as circular thumbnails
-  - Redesigned Hero section with fallback image, floating product images, stats
+  - Hero section with stats (500+ Pieces, 25+ Years, 100% Handcrafted)
   - Premium typography and animations throughout
 - **Jan 2026**: Implemented category-based product structure
   - Added category grid on Collections page

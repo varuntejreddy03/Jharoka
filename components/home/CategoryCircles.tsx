@@ -7,27 +7,27 @@ import categories from "@/data/categories.json";
 
 export default function CategoryCircles() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-white">
+    <section className="section-padding bg-white">
       <div className="container-premium">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-12 sm:mb-16"
+          className="section-header"
         >
-          <span className="inline-block text-jharoka-burgundy text-xs sm:text-sm font-medium tracking-[0.3em] uppercase mb-4">
+          <span className="section-label">
             Explore Our Range
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-jharoka-burgundy-900 mb-4 sm:mb-6">
+          <h2 className="section-title">
             Shop by Category
           </h2>
-          <p className="text-base sm:text-lg text-jharoka-text-secondary max-w-2xl mx-auto">
-            Discover our curated collections of handcrafted furniture
+          <p className="section-description">
+            Discover our curated collections of handcrafted heritage furniture
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-10">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -36,7 +36,7 @@ export default function CategoryCircles() {
               viewport={{ once: true }}
               transition={{ 
                 duration: 0.6, 
-                delay: index * 0.1,
+                delay: index * 0.08,
                 ease: [0.22, 1, 0.36, 1]
               }}
             >
@@ -44,9 +44,9 @@ export default function CategoryCircles() {
                 href={`/category/${category.slug}`}
                 className="block group text-center"
               >
-                <div className="relative mx-auto w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mb-3 sm:mb-4">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-jharoka-burgundy/20 to-jharoka-burgundy/5 transform group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-1 sm:inset-1.5 lg:inset-2 rounded-full overflow-hidden bg-jharoka-cream border-2 sm:border-3 lg:border-4 border-white shadow-lg group-hover:shadow-xl transition-shadow duration-500">
+                <div className="relative mx-auto w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mb-4 sm:mb-5">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8B4513]/15 to-[#D4A574]/10 transform group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-1.5 sm:inset-2 lg:inset-2.5 rounded-full overflow-hidden bg-[#F8F5EF] border-3 sm:border-4 border-white shadow-lg group-hover:shadow-xl transition-all duration-500">
                     <Image
                       src={category.image}
                       alt={category.name}
@@ -56,7 +56,7 @@ export default function CategoryCircles() {
                     />
                   </div>
                 </div>
-                <h3 className="font-serif text-sm sm:text-base lg:text-lg font-medium text-jharoka-burgundy-900 group-hover:text-jharoka-burgundy transition-colors">
+                <h3 className="font-serif text-sm sm:text-base lg:text-lg font-medium text-[#2C1810] group-hover:text-[#8B4513] transition-colors duration-300">
                   {category.name}
                 </h3>
               </Link>
@@ -68,18 +68,18 @@ export default function CategoryCircles() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-10 sm:mt-14"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-center mt-12 sm:mt-16"
         >
           <Link 
             href="/collections"
-            className="inline-flex items-center gap-2 sm:gap-3 text-jharoka-burgundy font-medium text-sm sm:text-base hover:gap-4 transition-all group"
+            className="inline-flex items-center gap-3 text-[#8B4513] font-semibold text-sm sm:text-base hover:gap-4 transition-all duration-300 group"
           >
-            <span className="border-b border-jharoka-burgundy/30 group-hover:border-jharoka-burgundy transition-colors pb-0.5">
+            <span className="border-b-2 border-[#8B4513]/30 group-hover:border-[#8B4513] transition-colors pb-0.5">
               View All Collections
             </span>
             <svg 
-              className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform" 
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"

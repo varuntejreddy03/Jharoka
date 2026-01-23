@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald, Cormorant_Garamond } from "next/font/google";
+import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,10 +8,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const oswald = Oswald({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -19,12 +19,13 @@ const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Jharoka | Interiors & Architecture",
-  description: "Exquisite interior design and architectural services.",
+  title: "Jharoka Heritage Furniture | Handcrafted Luxury",
+  description: "Discover handcrafted heritage furniture that bridges royal tradition with contemporary living. Each piece tells a story of artisanal excellence.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
@@ -40,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${oswald.variable} ${cormorant.variable} antialiased bg-jharoka-cream text-jharoka-burgundy-900 font-sans`}
+        className={`${inter.variable} ${playfair.variable} ${cormorant.variable} antialiased bg-jharoka-cream text-jharoka-burgundy-900 font-sans`}
       >
         {children}
       </body>
