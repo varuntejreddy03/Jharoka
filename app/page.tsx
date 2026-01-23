@@ -1,5 +1,5 @@
 import Hero from "@/components/home/Hero";
-import FeaturedCollections from "@/components/home/FeaturedCollections";
+import CategoryCircles from "@/components/home/CategoryCircles";
 import BrandStory from "@/components/home/BrandStory";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import PortfolioHighlights from "@/components/home/PortfolioHighlights";
@@ -15,11 +15,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <CategoryCircles />
       <BrandStory />
-      <FeaturedCollections />
       <ServicesOverview />
       <PortfolioHighlights />
-
       <StoreTour />
       <ContactSection />
       <Footer />

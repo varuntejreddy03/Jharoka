@@ -2,22 +2,14 @@
 
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Volume2, VolumeX, ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, Play, Pause } from 'lucide-react';
 import Link from 'next/link';
-import { cn } from "@/lib/utils";
+import Image from 'next/image';
 
 export default function Hero() {
-  const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [videoError, setVideoError] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
-  };
 
   const togglePlayPause = () => {
     if (videoRef.current) {
@@ -30,148 +22,150 @@ export default function Hero() {
     }
   };
 
-  const handleVideoError = () => {
-    setVideoError(true);
-  };
-
   return (
-    <section className="relative min-h-screen w-full flex items-center bg-[#FBF9F6] overflow-hidden">
-
-      {/* Background & Grain */}
+    <section className="relative min-h-screen w-full flex items-center bg-jharoka-cream overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[#FBF9F6]" />
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
-        {/* Subtle Gradient Glow */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#8B5A2B]/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#8B5A2B]/5 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-jharoka-cream via-jharoka-cream to-jharoka-cream-dim" />
+        <div className="absolute top-20 right-20 w-[600px] h-[600px] bg-jharoka-burgundy/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-20 left-20 w-[400px] h-[400px] bg-jharoka-gold/10 rounded-full blur-[120px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-6 lg:px-12 pt-16 md:pt-24 lg:pt-32">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="container-premium relative z-10 pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-          {/* Left: Brand Narrative */}
-          <div className="lg:col-span-7 space-y-8 lg:space-y-10 text-center lg:text-left order-2 lg:order-1">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="inline-block text-jharoka-burgundy text-xs sm:text-sm font-medium tracking-[0.25em] uppercase mb-4 sm:mb-6">
+                Heritage Furniture
+              </span>
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-jharoka-burgundy-900 leading-[1.1] mb-4 sm:mb-6">
+                <span className="block">Crafting</span>
+                <span className="block text-jharoka-burgundy italic">Timeless</span>
+                <span className="block">Elegance</span>
+              </h1>
+            </motion.div>
 
-
-            {/* Headline */}
-            {/* Headline */}
-            <h1 className="flex flex-col items-center lg:items-start text-[#2C2420]">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                className="font-serif text-sm md:text-xl tracking-[0.3em] font-medium uppercase mb-2"
-              >
-                Merging
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-                className="font-[var(--font-display)] italic text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-[#8B5A2B] font-medium leading-[0.85] tracking-tight mb-4 text-center lg:text-left"
-              >
-                Timeless Heritage
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-                className="font-serif text-sm md:text-xl tracking-[0.3em] font-medium uppercase"
-              >
-                with Modern Luxury
-              </motion.span>
-            </h1>
-
-            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.65 }}
-              className="text-lg md:text-xl text-[#6B5A4E] leading-loose max-w-2xl mx-auto lg:mx-0 font-light"
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="text-base sm:text-lg lg:text-xl text-jharoka-text-secondary leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
-              A Jharoka-based furniture and antiques company specializing in curating spaces that bridge the gap between royal tradition and contemporary living.
+              Discover handcrafted furniture that bridges royal tradition with contemporary living. Each piece tells a story of artisanal excellence.
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 lg:gap-6 pt-2 lg:pt-4"
+              transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
-              <Link href="#collections" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-[#2C2420] text-white px-8 py-4 lg:px-10 lg:py-5 rounded-sm hover:bg-[#463932] transition-colors duration-300 flex items-center justify-center gap-3 group text-sm lg:text-base tracking-widest uppercase font-medium shadow-sm">
-                  Explore Collection
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Link href="/collections" className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-jharoka-burgundy-900 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg hover:bg-jharoka-burgundy transition-colors duration-300 flex items-center justify-center gap-3 group text-sm sm:text-base font-medium shadow-lg hover:shadow-xl">
+                  Explore Collections
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-
-              <Link href="#contact" className="group flex items-center gap-2 px-4 py-2">
-                <span className="text-[#2C2420] text-sm tracking-widest uppercase font-medium border-b border-transparent group-hover:border-[#2C2420] transition-all">
-                  Visit Studio
+              <Link href="/contact" className="group flex items-center gap-2 px-4 py-2">
+                <span className="text-jharoka-burgundy-900 text-sm sm:text-base font-medium border-b border-transparent group-hover:border-jharoka-burgundy-900 transition-all">
+                  Visit Showroom
                 </span>
               </Link>
             </motion.div>
-          </div>
 
-          {/* Right: Jharoka Window Effect */}
-          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center mb-8 lg:mb-0">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="relative w-[80%] sm:w-full max-w-sm lg:max-w-md aspect-[3/4.5] mt-8 lg:-mt-20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 pt-4 sm:pt-6"
             >
-              {/* Clean Arch Frame */}
-              <div className="relative w-full h-full rounded-t-full border-[6px] lg:border-[8px] border-white shadow-2xl overflow-hidden bg-[#E5E0D8]">
-                {!videoError ? (
-                  <video
-                    ref={videoRef}
-                    src="/productpics/1746211064698.mp4"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-cover"
-                    onError={handleVideoError}
-                  />
-                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-[#E5E0D8] text-[#8B5A2B]">
-                    <Volume2 className="w-12 h-12 mb-4 opacity-50" />
-                    <span className="text-sm uppercase tracking-widest">Preview</span>
-                  </div>
-                )}
-                {/* Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-
-                {/* Inner Border Ring (Gold accent) */}
-                <div className="absolute inset-3 lg:inset-4 rounded-t-full border border-white/30 pointer-events-none" />
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-serif text-jharoka-burgundy-900">500+</div>
+                <div className="text-xs sm:text-sm text-jharoka-text-secondary">Pieces Crafted</div>
               </div>
-
-              {/* Video Controls (Floating Outside Bottom Right) */}
-              <div className="absolute bottom-6 -right-2 lg:bottom-8 lg:-right-8 z-30 flex flex-col gap-3">
-                <button
-                  onClick={togglePlayPause}
-                  className="w-10 h-10 lg:w-12 lg:h-12 bg-white text-[#2C2420] rounded-full flex items-center justify-center hover:bg-[#F5F2EB] transition-colors shadow-lg"
-                  aria-label={isPlaying ? "Pause" : "Play"}
-                >
-                  {isPlaying ? (
-                    <div className="w-2.5 h-2.5 lg:w-3 lg:h-3 bg-[#2C2420] rounded-sm" />
-                  ) : (
-                    <div className="w-0 h-0 border-t-[5px] lg:border-t-[6px] border-t-transparent border-l-[8px] lg:border-l-[10px] border-l-[#2C2420] border-b-[5px] lg:border-b-[6px] border-b-transparent ml-1" />
-                  )}
-                </button>
-                <button
-                  onClick={toggleMute}
-                  className="w-10 h-10 lg:w-12 lg:h-12 bg-[#2C2420] text-white rounded-full flex items-center justify-center hover:bg-[#4A3D36] transition-colors shadow-lg"
-                  aria-label={isMuted ? "Unmute" : "Mute"}
-                >
-                  {isMuted ? <VolumeX className="w-4 h-4 lg:w-5 lg:h-5" /> : <Volume2 className="w-4 h-4 lg:w-5 lg:h-5" />}
-                </button>
+              <div className="w-px h-10 sm:h-12 bg-jharoka-burgundy/20" />
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-serif text-jharoka-burgundy-900">25+</div>
+                <div className="text-xs sm:text-sm text-jharoka-text-secondary">Years Legacy</div>
+              </div>
+              <div className="w-px h-10 sm:h-12 bg-jharoka-burgundy/20" />
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-serif text-jharoka-burgundy-900">100%</div>
+                <div className="text-xs sm:text-sm text-jharoka-text-secondary">Handcrafted</div>
               </div>
             </motion.div>
           </div>
 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="order-1 lg:order-2 flex justify-center"
+          >
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+              <div className="relative aspect-[3/4] rounded-t-full overflow-hidden border-4 sm:border-6 lg:border-8 border-white shadow-2xl bg-jharoka-cream-dim">
+                <Image
+                  src="/productpics/bigsofa1.png"
+                  alt="Heritage Furniture"
+                  fill
+                  className={`object-cover transition-opacity duration-500 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+                  priority
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 512px"
+                />
+                
+                <video
+                  ref={videoRef}
+                  src="/productpics/1746211064698.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+                  onLoadedData={() => setVideoLoaded(true)}
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+                
+                <div className="absolute inset-2 sm:inset-3 lg:inset-4 rounded-t-full border border-white/30 pointer-events-none" />
+              </div>
+
+              <button
+                onClick={togglePlayPause}
+                className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-white/90 backdrop-blur-sm text-jharoka-burgundy-900 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg z-10"
+                aria-label={isPlaying ? "Pause" : "Play"}
+              >
+                {isPlaying ? (
+                  <Pause className="w-4 h-4 sm:w-5 sm:h-5" />
+                ) : (
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5 ml-0.5" />
+                )}
+              </button>
+
+              <div className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 w-20 h-20 sm:w-28 sm:h-28 rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-white shadow-xl bg-white">
+                <Image
+                  src="/productpics/bed1.png"
+                  alt="Featured Bed"
+                  fill
+                  className="object-cover"
+                  sizes="112px"
+                />
+              </div>
+
+              <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-white shadow-xl bg-white">
+                <Image
+                  src="/productpics/2table1.png"
+                  alt="Featured Table"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
