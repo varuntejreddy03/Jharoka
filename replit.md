@@ -1,7 +1,7 @@
 # Jharoka Heritage Furniture Website
 
 ## Overview
-This is a Next.js 16 website for Jharoka Heritage Furniture, showcasing traditional furniture pieces and collections.
+This is a Next.js 16 website for Jharoka Heritage Furniture, showcasing traditional furniture pieces organized by categories.
 
 ## Tech Stack
 - **Framework**: Next.js 16.1.1 with Turbopack
@@ -12,15 +12,50 @@ This is a Next.js 16 website for Jharoka Heritage Furniture, showcasing traditio
 ## Project Structure
 - `app/` - Next.js App Router pages and layouts
   - `about/` - About page
-  - `collections/` - Collections page
+  - `category/[slug]/` - Category detail pages (shows products by category)
+  - `collections/` - Collections page (shows all categories)
   - `contact/` - Contact page
   - `portfolio/` - Portfolio page
-  - `product/` - Product pages
+  - `product/[id]/` - Product detail pages with image gallery
   - `services/` - Services page
 - `components/` - Reusable React components
-- `data/` - JSON data files (products, collections, team, testimonials)
+  - `home/` - Homepage components
+  - `layout/` - Navbar, Footer, WhatsApp button
+  - `product/` - Product page components
+  - `ui/` - UI primitives (Button, Card, Section)
+- `data/` - JSON data files
+  - `categories.json` - Product categories (Sofas, Chairs, Beds, etc.)
+  - `products.json` - Product listings with images and details
+  - `collections.json` - Style collections
+  - `team.json` - Team members
+  - `testimonials.json` - Customer testimonials
 - `lib/` - Utility functions
-- `public/` - Static assets (images, logos)
+- `public/` - Static assets
+  - `productpics/` - Product images
+  - `images/` - Category and additional images
+
+## Categories
+The website uses a category-based product structure:
+- Sofas
+- Chairs
+- Beds
+- Dining Tables
+- Wardrobes
+- Office Furniture
+
+## Adding New Products
+1. Add product images to `public/productpics/` or `public/images/{category}/{product-slug}/`
+2. Add product entry to `data/products.json` with:
+   - `id`, `name`, `slug`, `category` (matches category slug)
+   - `mainImage`, `images` array for gallery
+   - `price`, `shortDescription`, `description`
+   - `material`, `dimensions`, `features`
+   - `inStock`, `deliveryTime`
+
+## Adding New Categories
+1. Add entry to `data/categories.json` with:
+   - `id`, `name`, `slug`, `description`, `image`
+2. Add products with matching category slug
 
 ## Development
 ```bash
@@ -38,3 +73,11 @@ npm run start
 - `next.config.ts` - Next.js configuration with React Compiler and allowed dev origins
 - `tsconfig.json` - TypeScript configuration
 - `postcss.config.mjs` - PostCSS with Tailwind
+
+## Recent Changes
+- **Jan 2026**: Implemented category-based product structure
+  - Added category grid on Collections page
+  - Created category detail pages showing products
+  - Updated product detail page with image gallery
+  - Added breadcrumb navigation
+  - Updated navbar with proper page links

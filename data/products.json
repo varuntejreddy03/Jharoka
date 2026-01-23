@@ -1,74 +1,38 @@
 [
   {
-    "id": "bed-001",
-    "name": "Heritage Platform Bed",
-    "category": "Bedroom",
-    "price": 125000,
-    "heroImage": "/productpics/bed1.png",
-    "images": {
-      "gallery": ["/productpics/bed2.png"],
-      "details": ["/productpics/Gemini_Generated_Image_nx8bxinx8bxinx8b.png"],
-      "lifestyle": []
-    },
-    "description": "Handcrafted platform bed with traditional joinery and contemporary lines. Features solid teak construction with brass hardware details.",
-    "collection": "Modern Minimalist",
-    "material": "Solid Teak, Brass Hardware",
-    "dimensions": "King: 84\" x 78\" x 42\" | Queen: 84\" x 66\" x 42\"",
-    "features": ["Solid wood construction", "Traditional joinery", "No screws or nails", "Natural oil finish"],
-    "inStock": true,
-    "deliveryTime": "8-10 weeks"
-  },
-  {
-    "id": "sofa-large-001",
-    "name": "Royal Green Sectional Sofa",
-    "category": "Living Room",
+    "id": "luxury-lshape",
+    "name": "Luxury L-Shape Sofa",
+    "slug": "luxury-lshape",
+    "category": "sofas",
     "price": 185000,
-    "heroImage": "/productpics/bigsofa1.png",
-    "images": {
-      "gallery": ["/productpics/bigsofa2.png"],
-      "details": ["/productpics/Gemini_Generated_Image_fqvj4kfqvj4kfqvj.png"],
-      "lifestyle": []
-    },
-    "description": "Luxurious sectional sofa upholstered in premium emerald velvet. Features deep seating with high-density foam and traditional button tufting.",
-    "collection": "Royal Rajasthan",
-    "material": "Velvet Upholstery, Hardwood Frame, High-Density Foam",
+    "shortDescription": "Premium emerald velvet sectional with deep seating and button tufting",
+    "description": "Luxurious sectional sofa upholstered in premium emerald velvet. Features deep seating with high-density foam and traditional button tufting. Perfect for spacious living rooms.",
+    "mainImage": "/productpics/bigsofa1.png",
+    "images": [
+      "/productpics/bigsofa1.png",
+      "/productpics/bigsofa2.png",
+      "/productpics/Gemini_Generated_Image_fqvj4kfqvj4kfqvj.png"
+    ],
+    "material": "Velvet Upholstery, Hardwood Frame",
     "dimensions": "L: 108\" x W: 84\" x H: 32\"",
     "features": ["Premium velvet upholstery", "Button tufted details", "Hardwood frame", "Removable cushions"],
     "inStock": true,
     "deliveryTime": "6-8 weeks"
   },
   {
-    "id": "sofa-small-001",
-    "name": "Striped Accent Chairs (Set of 2)",
-    "category": "Seating",
-    "price": 95000,
-    "heroImage": "/productpics/smallsofa1.png",
-    "images": {
-      "gallery": ["/productpics/smallsofa2.png"],
-      "details": ["/productpics/Gemini_Generated_Image_1bnbtu1bnbtu1bnb.png"],
-      "lifestyle": []
-    },
-    "description": "Elegant pair of accent chairs with hand-woven striped upholstery. Perfect for creating conversation areas with traditional charm.",
-    "collection": "Heritage Weaves",
-    "material": "Handwoven Cotton, Teak Frame",
-    "dimensions": "W: 28\" x D: 30\" x H: 34\" (each chair)",
-    "features": ["Handwoven fabric", "Solid teak frame", "Ergonomic design", "Set of 2 chairs"],
-    "inStock": true,
-    "deliveryTime": "4-6 weeks"
-  },
-  {
-    "id": "sofa-pink-001",
+    "id": "classic-3seater",
     "name": "Blush Pink Loveseat",
-    "category": "Living Room",
+    "slug": "classic-3seater",
+    "category": "sofas",
     "price": 85000,
-    "heroImage": "/productpics/sofapink1.png",
-    "images": {
-      "gallery": ["/productpics/Gemini_Generated_Image_57bty357bty357bt.png"],
-      "details": [],
-      "lifestyle": ["/productpics/Gemini_Generated_Image_phb0lgphb0lgphb0.png"]
-    },
+    "shortDescription": "Sophisticated loveseat in soft blush pink upholstery",
     "description": "Sophisticated loveseat in soft blush pink upholstery. Features curved arms and plush seating for intimate spaces.",
-    "collection": "Urban Oasis",
+    "mainImage": "/productpics/sofapink1.png",
+    "images": [
+      "/productpics/sofapink1.png",
+      "/productpics/Gemini_Generated_Image_57bty357bty357bt.png",
+      "/productpics/Gemini_Generated_Image_phb0lgphb0lgphb0.png"
+    ],
     "material": "Linen Blend Upholstery, Ash Wood Frame",
     "dimensions": "W: 58\" x D: 32\" x H: 30\"",
     "features": ["Soft linen blend fabric", "Curved arm design", "Plush cushioning", "Compact size"],
@@ -76,22 +40,195 @@
     "deliveryTime": "5-7 weeks"
   },
   {
-    "id": "dining-001",
+    "id": "wooden-armchair",
+    "name": "Striped Accent Chairs",
+    "slug": "wooden-armchair",
+    "category": "chairs",
+    "price": 95000,
+    "shortDescription": "Elegant pair of chairs with handwoven striped upholstery",
+    "description": "Elegant pair of accent chairs with hand-woven striped upholstery. Perfect for creating conversation areas with traditional charm.",
+    "mainImage": "/productpics/smallsofa1.png",
+    "images": [
+      "/productpics/smallsofa1.png",
+      "/productpics/smallsofa2.png",
+      "/productpics/Gemini_Generated_Image_1bnbtu1bnbtu1bnb.png"
+    ],
+    "material": "Handwoven Cotton, Teak Frame",
+    "dimensions": "W: 28\" x D: 30\" x H: 34\" (each)",
+    "features": ["Handwoven fabric", "Solid teak frame", "Ergonomic design", "Set of 2 chairs"],
+    "inStock": true,
+    "deliveryTime": "4-6 weeks"
+  },
+  {
+    "id": "accent-chair-pair",
+    "name": "Designer Accent Chair",
+    "slug": "accent-chair-pair",
+    "category": "chairs",
+    "price": 45000,
+    "shortDescription": "Modern accent chair with premium upholstery",
+    "description": "A beautifully designed accent chair perfect for adding a touch of elegance to any room. Features premium cushioning and solid wood frame.",
+    "mainImage": "/productpics/1746207231979.jpg",
+    "images": [
+      "/productpics/1746207231979.jpg"
+    ],
+    "material": "Premium Fabric, Solid Wood Frame",
+    "dimensions": "W: 26\" x D: 24\" x H: 38\"",
+    "features": ["Premium cushioning", "Solid wood frame", "Modern design", "Easy maintenance"],
+    "inStock": true,
+    "deliveryTime": "3-4 weeks"
+  },
+  {
+    "id": "heritage-platform-bed",
+    "name": "Heritage Platform Bed",
+    "slug": "heritage-platform-bed",
+    "category": "beds",
+    "price": 125000,
+    "shortDescription": "Handcrafted platform bed with traditional joinery",
+    "description": "Handcrafted platform bed with traditional joinery and contemporary lines. Features solid teak construction with brass hardware details.",
+    "mainImage": "/productpics/bed1.png",
+    "images": [
+      "/productpics/bed1.png",
+      "/productpics/bed2.png",
+      "/productpics/Gemini_Generated_Image_nx8bxinx8bxinx8b.png"
+    ],
+    "material": "Solid Teak, Brass Hardware",
+    "dimensions": "King: 84\" x 78\" x 42\"",
+    "features": ["Solid wood construction", "Traditional joinery", "No screws or nails", "Natural oil finish"],
+    "inStock": true,
+    "deliveryTime": "8-10 weeks"
+  },
+  {
+    "id": "canopy-bed",
+    "name": "Royal Canopy Bed",
+    "slug": "canopy-bed",
+    "category": "beds",
+    "price": 195000,
+    "shortDescription": "Majestic canopy bed with intricate carvings",
+    "description": "A majestic canopy bed featuring intricate hand carvings inspired by Mughal architecture. Made from premium sheesham wood with gold leaf accents.",
+    "mainImage": "/productpics/bed2.png",
+    "images": [
+      "/productpics/bed2.png",
+      "/productpics/bed1.png"
+    ],
+    "material": "Sheesham Wood, Gold Leaf",
+    "dimensions": "King: 90\" x 80\" x 96\"",
+    "features": ["Hand-carved details", "Gold leaf accents", "Canopy structure", "Mughal-inspired design"],
+    "inStock": false,
+    "deliveryTime": "12-14 weeks"
+  },
+  {
+    "id": "heritage-dining-set",
     "name": "Heritage Dining Table Set",
-    "category": "Dining Room",
+    "slug": "heritage-dining-set",
+    "category": "dining-tables",
     "price": 225000,
-    "heroImage": "/productpics/2table1.png",
-    "images": {
-      "gallery": ["/productpics/2table2.png"],
-      "details": ["/productpics/Gemini_Generated_Image_nci281nci281nci2.png"],
-      "lifestyle": []
-    },
+    "shortDescription": "Hand-carved table with brass inlay and matching chairs",
     "description": "Exquisite dining set featuring hand-carved table with brass inlay work and matching chairs. Seats 6-8 people comfortably.",
-    "collection": "Royal Rajasthan",
-    "material": "Reclaimed Teak, Brass Inlay, Handwoven Seats",
-    "dimensions": "Table: 96\" x 42\" x 30\" | Chairs: 18\" x 20\" x 36\"",
+    "mainImage": "/productpics/2table1.png",
+    "images": [
+      "/productpics/2table1.png",
+      "/productpics/2table2.png",
+      "/productpics/Gemini_Generated_Image_nci281nci281nci2.png"
+    ],
+    "material": "Reclaimed Teak, Brass Inlay",
+    "dimensions": "Table: 96\" x 42\" x 30\"",
     "features": ["Hand-carved details", "Brass inlay work", "Seats 6-8 people", "Matching chair set"],
     "inStock": true,
     "deliveryTime": "10-12 weeks"
+  },
+  {
+    "id": "marble-dining-table",
+    "name": "Marble Top Dining Table",
+    "slug": "marble-dining-table",
+    "category": "dining-tables",
+    "price": 175000,
+    "shortDescription": "Elegant marble top with carved wooden base",
+    "description": "Stunning dining table featuring Italian marble top with intricately carved wooden base. Perfect for modern luxury dining spaces.",
+    "mainImage": "/productpics/2table2.png",
+    "images": [
+      "/productpics/2table2.png",
+      "/productpics/2table1.png"
+    ],
+    "material": "Italian Marble, Teak Base",
+    "dimensions": "84\" x 42\" x 30\"",
+    "features": ["Italian marble top", "Carved wooden base", "Seats 6 people", "Easy maintenance"],
+    "inStock": true,
+    "deliveryTime": "8-10 weeks"
+  },
+  {
+    "id": "classic-wardrobe",
+    "name": "Classic Double Door Wardrobe",
+    "slug": "classic-wardrobe",
+    "category": "wardrobes",
+    "price": 145000,
+    "shortDescription": "Spacious wardrobe with mirror doors and carved details",
+    "description": "Spacious double-door wardrobe featuring beveled mirror doors, hand-carved crown molding, and ample storage with adjustable shelving.",
+    "mainImage": "/productpics/bed1.png",
+    "images": [
+      "/productpics/bed1.png",
+      "/productpics/bed2.png"
+    ],
+    "material": "Solid Oak, Beveled Mirror",
+    "dimensions": "W: 72\" x D: 24\" x H: 84\"",
+    "features": ["Beveled mirror doors", "Adjustable shelving", "Carved crown molding", "Soft-close hinges"],
+    "inStock": true,
+    "deliveryTime": "6-8 weeks"
+  },
+  {
+    "id": "sliding-wardrobe",
+    "name": "Modern Sliding Wardrobe",
+    "slug": "sliding-wardrobe",
+    "category": "wardrobes",
+    "price": 165000,
+    "shortDescription": "Contemporary design with smooth sliding doors",
+    "description": "Modern wardrobe with smooth-gliding sliding doors, integrated LED lighting, and customizable interior organization system.",
+    "mainImage": "/productpics/bigsofa1.png",
+    "images": [
+      "/productpics/bigsofa1.png",
+      "/productpics/bigsofa2.png"
+    ],
+    "material": "Engineered Wood, Lacquered Finish",
+    "dimensions": "W: 96\" x D: 26\" x H: 96\"",
+    "features": ["Sliding doors", "LED lighting", "Modular interior", "Space-saving design"],
+    "inStock": true,
+    "deliveryTime": "5-7 weeks"
+  },
+  {
+    "id": "executive-desk",
+    "name": "Executive Writing Desk",
+    "slug": "executive-desk",
+    "category": "office-furniture",
+    "price": 85000,
+    "shortDescription": "Elegant desk with leather inlay and brass accents",
+    "description": "Distinguished executive desk featuring leather inlay writing surface, multiple drawers with brass hardware, and cable management system.",
+    "mainImage": "/productpics/2table1.png",
+    "images": [
+      "/productpics/2table1.png",
+      "/productpics/2table2.png"
+    ],
+    "material": "Walnut Wood, Leather Inlay",
+    "dimensions": "W: 60\" x D: 30\" x H: 30\"",
+    "features": ["Leather inlay top", "Multiple drawers", "Cable management", "Brass hardware"],
+    "inStock": true,
+    "deliveryTime": "4-6 weeks"
+  },
+  {
+    "id": "bookcase-cabinet",
+    "name": "Heritage Bookcase Cabinet",
+    "slug": "bookcase-cabinet",
+    "category": "office-furniture",
+    "price": 115000,
+    "shortDescription": "Tall bookcase with glass doors and carved details",
+    "description": "Stately bookcase cabinet with glass-paneled doors, adjustable shelving, and intricately carved crown and base. Perfect for home libraries.",
+    "mainImage": "/productpics/smallsofa1.png",
+    "images": [
+      "/productpics/smallsofa1.png",
+      "/productpics/smallsofa2.png"
+    ],
+    "material": "Mahogany, Beveled Glass",
+    "dimensions": "W: 48\" x D: 18\" x H: 84\"",
+    "features": ["Glass-paneled doors", "Adjustable shelves", "Carved details", "Lockable cabinet"],
+    "inStock": true,
+    "deliveryTime": "6-8 weeks"
   }
 ]

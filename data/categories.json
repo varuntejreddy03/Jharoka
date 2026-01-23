@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sofas",
+    "name": "Sofas",
+    "slug": "sofas",
+    "description": "Luxurious sofas handcrafted with premium materials",
+    "image": "/productpics/bigsofa1.png"
+  },
+  {
+    "id": "chairs",
+    "name": "Chairs",
+    "slug": "chairs",
+    "description": "Elegant seating solutions for every space",
+    "image": "/productpics/smallsofa1.png"
+  },
+  {
+    "id": "beds",
+    "name": "Beds",
+    "slug": "beds",
+    "description": "Heritage beds for restful luxury",
+    "image": "/productpics/bed1.png"
+  },
+  {
+    "id": "dining-tables",
+    "name": "Dining Tables",
+    "slug": "dining-tables",
+    "description": "Exquisite dining sets for memorable gatherings",
+    "image": "/productpics/2table1.png"
+  },
+  {
+    "id": "wardrobes",
+    "name": "Wardrobes",
+    "slug": "wardrobes",
+    "description": "Spacious storage with timeless design",
+    "image": "/productpics/bed2.png"
+  },
+  {
+    "id": "office-furniture",
+    "name": "Office Furniture",
+    "slug": "office-furniture",
+    "description": "Professional workspace essentials",
+    "image": "/productpics/2table2.png"
+  }
+]
