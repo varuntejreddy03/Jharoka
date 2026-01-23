@@ -75,6 +75,11 @@ npm run start
 - `postcss.config.mjs` - PostCSS with Tailwind
 
 ## Recent Changes
+- **Jan 2026**: Homepage redesign with category-first approach
+  - Replaced FeaturedCollections carousel with CategoryCircles component
+  - New "Shop by Category" section showing all 6 categories as circular thumbnails
+  - Redesigned Hero section with fallback image, floating product images, stats
+  - Premium typography and animations throughout
 - **Jan 2026**: Implemented category-based product structure
   - Added category grid on Collections page
   - Created category detail pages showing products
