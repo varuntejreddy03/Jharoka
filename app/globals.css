@@ -5,37 +5,31 @@
   --font-serif: var(--font-heading);
   --font-display: var(--font-display);
 
-  /* Primary Background (Soft Ivory) */
-  --color-jharoka-cream: #F8F3EB;
-  --color-jharoka-cream-dim: #F5F2EB;
-  /* Card Background #FBF7F2 mapped here or roughly similar? The user asked for FBF7F2 for cards specifically. I will create a specific var for card. */
-  --color-jharoka-card-bg: #FBF7F2;
+  --color-jharoka-cream: #FAF8F5;
+  --color-jharoka-cream-dim: #F5F2ED;
+  --color-jharoka-card-bg: #FFFFFF;
 
-  /* Primary Text (Deep Coffee Brown) */
-  --color-jharoka-burgundy-900: #2B1C14;
-  /* Secondary Text (Muted Brown-Grey) */
-  --color-jharoka-text-secondary: #6B5A4E;
+  --color-jharoka-burgundy-900: #1A1311;
+  --color-jharoka-text-secondary: #6B6560;
 
-  /* Accent / CTA (Teak Wood Brown) */
   --color-jharoka-burgundy: #8B5A2B;
-  /* Dark Section Background (Deep Wine) */
-  --color-jharoka-wine: #3A0F14;
+  --color-jharoka-wine: #2A1810;
+  --color-jharoka-gold: #C9A962;
 
-  /* Deprecated/Mapped for compatibility but updated values */
-  --color-jharoka-gold: #6B5A4E;
-  /* Mapping 'gold' to secondary text/muted brown to remove bright gold */
   --color-jharoka-gold-light: #FBF7F2;
-  /* Mapping light gold to card bg warmth */
   --color-jharoka-gold-dark: #8B5A2B;
-  /* Dark gold mapped to accent */
-
   --color-jharoka-burgundy-100: #FBE4E8;
 }
 
-/* Custom Base Styles */
 @layer base {
   * {
     box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html,
@@ -46,6 +40,7 @@
 
   body {
     @apply bg-jharoka-cream text-jharoka-burgundy-900;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
   h1,
@@ -55,21 +50,19 @@
   h5,
   h6 {
     @apply font-serif;
+    text-wrap: balance;
   }
 
-  /* Luxury Animation Curves */
   .luxury-ease {
     transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  /* Subtle Background Texture */
   .heritage-texture {
     background-image:
-      radial-gradient(circle at 1px 1px, rgba(139, 90, 43, 0.03) 1px, transparent 0);
-    background-size: 20px 20px;
+      radial-gradient(circle at 1px 1px, rgba(139, 90, 43, 0.02) 1px, transparent 0);
+    background-size: 24px 24px;
   }
 
-  /* Scrollbar Styling */
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -77,5 +70,62 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  .premium-shadow {
+    box-shadow: 
+      0 4px 6px -1px rgba(26, 19, 17, 0.04),
+      0 10px 20px -2px rgba(26, 19, 17, 0.06),
+      0 20px 40px -4px rgba(26, 19, 17, 0.08);
+  }
+
+  .premium-shadow-hover {
+    box-shadow: 
+      0 8px 12px -2px rgba(26, 19, 17, 0.06),
+      0 16px 32px -4px rgba(26, 19, 17, 0.10),
+      0 32px 64px -8px rgba(26, 19, 17, 0.12);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+@layer utilities {
+  .container-premium {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }

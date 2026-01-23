@@ -4,8 +4,7 @@ import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
-import { Section } from "@/components/ui/Section";
+import { ChevronRight, ArrowRight, Heart, Eye } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import categories from "@/data/categories.json";
@@ -29,9 +28,10 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
     return (
       <div className="bg-jharoka-cream min-h-screen">
         <Navbar />
-        <main className="pt-32 text-center">
-          <h1 className="font-serif text-4xl text-jharoka-burgundy-900">Category not found</h1>
-          <Link href="/collections" className="text-jharoka-burgundy mt-4 inline-block hover:underline">
+        <main className="pt-32 text-center container-premium">
+          <h1 className="font-serif text-4xl text-jharoka-burgundy-900 mb-4">Category not found</h1>
+          <Link href="/collections" className="text-jharoka-burgundy hover:underline inline-flex items-center gap-2">
+            <ChevronRight className="w-4 h-4 rotate-180" />
             Back to Collections
           </Link>
         </main>
@@ -44,109 +44,133 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
     <div className="bg-jharoka-cream min-h-screen">
       <Navbar />
       
-      <main className="pt-24 min-h-screen">
-        <Section>
-          <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-jharoka-burgundy-900/60 mb-8 font-medium">
+      <main className="pt-28 sm:pt-32 pb-20 sm:pb-28">
+        <div className="container-premium">
+          <motion.nav
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-2 text-xs sm:text-sm text-jharoka-text-secondary mb-8 sm:mb-12 flex-wrap"
+          >
             <Link href="/" className="hover:text-jharoka-burgundy transition-colors">Home</Link>
-            <ChevronRight className="w-3 h-3" />
+            <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
             <Link href="/collections" className="hover:text-jharoka-burgundy transition-colors">Collections</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-jharoka-burgundy-900">{category.name}</span>
-          </div>
+            <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span className="text-jharoka-burgundy-900 font-medium">{category.name}</span>
+          </motion.nav>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-12 sm:mb-16"
           >
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-jharoka-burgundy-900 mb-6">
+            <span className="inline-block text-jharoka-burgundy text-xs sm:text-sm font-medium tracking-[0.3em] uppercase mb-4">
+              Collection
+            </span>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-jharoka-burgundy-900 mb-4 sm:mb-6">
               {category.name}
             </h1>
-            <p className="text-xl text-jharoka-text-secondary max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-jharoka-text-secondary max-w-2xl leading-relaxed">
               {category.description}
             </p>
           </motion.div>
 
           {categoryProducts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-jharoka-burgundy-900/60 text-lg">
+              <p className="text-jharoka-text-secondary text-lg mb-6">
                 No products available in this category yet.
               </p>
               <Link 
                 href="/collections" 
-                className="inline-block mt-6 text-jharoka-burgundy hover:underline"
+                className="inline-flex items-center gap-2 text-jharoka-burgundy hover:gap-3 transition-all"
               >
                 Browse other collections
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {categoryProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ 
+                    duration: 0.7, 
+                    delay: index * 0.1,
+                    ease: [0.22, 1, 0.36, 1]
+                  }}
                 >
-                  <div className="group bg-white rounded-lg overflow-hidden border border-jharoka-burgundy/10 shadow-sm hover:shadow-xl transition-all duration-500">
-                    <div className="relative aspect-[4/3] bg-jharoka-cream-dim overflow-hidden">
-                      <Image
-                        src={product.mainImage}
-                        alt={product.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center -z-10">
-                        <div className="w-20 h-20 rounded-full bg-jharoka-burgundy/10 flex items-center justify-center">
-                          <span className="text-3xl text-jharoka-burgundy/40">
-                            {product.name.charAt(0)}
+                  <Link href={`/product/${product.id}`} className="block group">
+                    <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden premium-shadow group-hover:premium-shadow-hover transition-all duration-500">
+                      <div className="relative aspect-[4/3] sm:aspect-square overflow-hidden bg-jharoka-cream-dim">
+                        <Image
+                          src={product.mainImage}
+                          alt={product.name}
+                          fill
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                        
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        
+                        {product.inStock ? (
+                          <span className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-emerald-600 text-white px-3 py-1.5 text-[10px] sm:text-xs font-medium tracking-wider uppercase rounded-full">
+                            In Stock
                           </span>
+                        ) : (
+                          <span className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-jharoka-burgundy-900/80 text-white px-3 py-1.5 text-[10px] sm:text-xs font-medium tracking-wider uppercase rounded-full">
+                            Made to Order
+                          </span>
+                        )}
+
+                        <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
+                          <button className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg">
+                            <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-jharoka-burgundy-900" />
+                          </button>
+                          <button className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-lg">
+                            <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-jharoka-burgundy-900" />
+                          </button>
+                        </div>
+
+                        <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                          <button className="w-full bg-white/95 backdrop-blur-sm text-jharoka-burgundy-900 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold tracking-wide hover:bg-white transition-colors shadow-lg">
+                            Quick View
+                          </button>
                         </div>
                       </div>
-                      
-                      <div className="absolute inset-0 bg-jharoka-burgundy/0 group-hover:bg-jharoka-burgundy/5 transition-colors duration-300" />
-                      
-                      {product.inStock && (
-                        <span className="absolute top-4 left-4 bg-jharoka-burgundy/90 text-white px-3 py-1 text-[10px] uppercase tracking-widest font-medium rounded-full">
-                          In Stock
-                        </span>
-                      )}
-                    </div>
 
-                    <div className="p-6">
-                      <h3 className="font-serif text-xl font-bold text-jharoka-burgundy-900 mb-2 group-hover:text-jharoka-burgundy transition-colors">
-                        {product.name}
-                      </h3>
-                      <p className="text-jharoka-burgundy-900/60 text-sm mb-4 line-clamp-2">
-                        {product.shortDescription}
-                      </p>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-medium text-jharoka-burgundy-900">
-                          {formatPrice(product.price)}
-                        </span>
-                        <Link 
-                          href={`/product/${product.id}`}
-                          className="inline-flex items-center gap-2 bg-jharoka-burgundy-900 text-white px-4 py-2 text-xs uppercase tracking-widest font-medium rounded-sm hover:bg-jharoka-burgundy transition-colors duration-300"
-                        >
-                          View Product
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
+                      <div className="p-4 sm:p-6">
+                        <div className="mb-3 sm:mb-4">
+                          <h3 className="font-serif text-lg sm:text-xl font-medium text-jharoka-burgundy-900 mb-1 sm:mb-2 group-hover:text-jharoka-burgundy transition-colors">
+                            {product.name}
+                          </h3>
+                          <p className="text-jharoka-text-secondary text-xs sm:text-sm leading-relaxed line-clamp-2">
+                            {product.shortDescription}
+                          </p>
+                        </div>
+                        
+                        <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-jharoka-cream-dim">
+                          <div>
+                            <span className="text-lg sm:text-xl font-semibold text-jharoka-burgundy-900">
+                              {formatPrice(product.price)}
+                            </span>
+                            <span className="text-xs text-jharoka-text-secondary ml-1 sm:ml-2">excl. taxes</span>
+                          </div>
+                          <div className="flex items-center gap-1 sm:gap-2 text-jharoka-burgundy group-hover:gap-2 sm:group-hover:gap-3 transition-all">
+                            <span className="text-xs sm:text-sm font-medium">View</span>
+                            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
           )}
-        </Section>
+        </div>
       </main>
 
       <Footer />
