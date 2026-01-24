@@ -35,12 +35,10 @@ export default function FeaturedCollections() {
   const isInView = useInView(ref, { once: true });
 
   const currentProduct = productsData[currentIndex];
-  // Combine all images: Hero + Gallery + Lifestyle + Details
+  // Combine main image with all gallery images
   const allImages = [
-    currentProduct.heroImage,
-    ...(currentProduct.images?.gallery || []),
-    ...(currentProduct.images?.lifestyle || []),
-    ...(currentProduct.images?.details || [])
+    currentProduct.mainImage,
+    ...(currentProduct.images || [])
   ].filter(Boolean);
 
   // Reset image index when product changes
@@ -206,7 +204,7 @@ export default function FeaturedCollections() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-jharoka-burgundy text-xs font-semibold tracking-[0.25em] uppercase">
-                      {currentProduct.collection}
+                      {currentProduct.category}
                     </span>
                     <div className="flex gap-2">
                       <button onClick={prevProduct} className="p-2 hover:bg-jharoka-burgundy/5 rounded-full transition-colors group">

@@ -1,0 +1,37 @@
+1:13:48 PM: Failed to compile.
+1:13:48 PM: 
+1:13:48 PM: ./components/home/FeaturedCollections.tsx:40:20
+1:13:48 PM: Type error: Property 'heroImage' does not exist on type '{ id: string; name: string; slug: string; category: string; price: number; shortDescription: string; description: string; mainImage: string; images: string[]; material: string; dimensions: string; features: string[]; inStock: boolean; deliveryTime: string; }'.
+1:13:48 PM:   38 |   // Combine all images: Hero + Gallery + Lifestyle + Details
+1:13:48 PM:   39 |   const allImages = [
+1:13:48 PM: > 40 |     currentProduct.heroImage,
+1:13:48 PM:      |                    ^
+1:13:48 PM:   41 |     ...(currentProduct.images?.gallery || []),
+1:13:48 PM:   42 |     ...(currentProduct.images?.lifestyle || []),
+1:13:48 PM:   43 |     ...(currentProduct.images?.details || [])
+1:13:48 PM: Next.js build worker exited with code: 1 and signal: null
+1:13:48 PM: ​
+1:13:48 PM: "build.command" failed                                        
+1:13:48 PM: ────────────────────────────────────────────────────────────────
+1:13:48 PM: ​
+1:13:48 PM:   Error message
+1:13:48 PM:   Command failed with exit code 1: npm run build (https://ntl.fyi/exit-code-1)
+1:13:48 PM: ​
+1:13:48 PM:   Error location
+1:13:48 PM:   In Build command from Netlify app:
+1:13:48 PM:   npm run build
+1:13:48 PM: ​
+1:13:48 PM:   Resolved config
+1:13:48 PM:   build:
+1:13:48 PM:     command: npm run build
+1:13:48 PM:     commandOrigin: ui
+1:13:48 PM:     publish: /opt/build/repo/.next
+1:13:48 PM:     publishOrigin: ui
+1:13:48 PM:   plugins:
+1:13:48 PM:     - inputs: {}
+1:13:48 PM:       origin: ui
+1:13:48 PM:       package: "@netlify/plugin-nextjs"
+1:13:49 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+1:13:49 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+1:13:49 PM: Failing build: Failed to build site
+1:13:49 PM: Finished processing build request in 30.92s
