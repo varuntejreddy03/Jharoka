@@ -2,34 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-
-const projects = [
-  {
-    id: 1,
-    title: "The Grind Cafe",
-    location: "Tellapur, Hyderabad",
-    year: "2024",
-    category: "Commercial",
-    image: "/output/Chairs/two-chairs-with-round-tea-table.webp",
-  },
-  {
-    id: 2,
-    title: "Heritage Villa",
-    location: "Jubilee Hills",
-    year: "2024",
-    category: "Residential",
-    image: "/output/Sofas/modern-wooden-sofa-sage-green-cushions.webp",
-  },
-  {
-    id: 3,
-    title: "Boutique Hotel",
-    location: "Banjara Hills",
-    year: "2023",
-    category: "Hospitality",
-    image: "/output/Beds/wooden-chaise-lounge-bed-white-cushion.webp",
-  },
-];
+import { ArrowUpRight, Clock } from "lucide-react";
 
 export default function PortfolioHighlights() {
   return (
@@ -41,7 +14,7 @@ export default function PortfolioHighlights() {
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative">
         <motion.div
-          className="text-center mb-20 lg:mb-28"
+          className="text-center mb-16 lg:mb-24"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -68,66 +41,107 @@ export default function PortfolioHighlights() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-10">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="group cursor-pointer"
-            >
-              <div className="relative">
-                <div className="absolute -inset-3 bg-gradient-to-br from-[#D4A574]/10 to-[#8B4513]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="group cursor-pointer"
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-[#D4A574]/10 to-[#8B4513]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
+              
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#F0EBE3] shadow-2xl">
+                <Image
+                  src="/images/grind-cafe.png"
+                  alt="The Grind Cafe"
+                  fill
+                  className="object-cover transition-all duration-1000 ease-out group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
                 
-                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#F0EBE3]">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-all duration-1000 ease-out group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0a]/80 via-[#1a0f0a]/20 to-transparent" />
-                  
-                  <div className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
-                    <ArrowUpRight className="w-5 h-5 text-white" />
-                  </div>
-                  
-                  <div className="absolute top-5 left-5">
-                    <span className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-xs font-medium tracking-wider border border-white/10">
-                      {project.category}
-                    </span>
-                  </div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-                    <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-                      <p className="text-white/60 text-sm mb-2 tracking-wide">
-                        {project.location} • {project.year}
-                      </p>
-                      <h3 className="text-white text-2xl lg:text-3xl font-light tracking-wide">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0a]/70 via-transparent to-transparent" />
+                
+                <div className="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                  <ArrowUpRight className="w-6 h-6 text-white" />
+                </div>
+                
+                <div className="absolute top-5 left-5">
+                  <span className="px-4 py-2 bg-[#D4A574] rounded-full text-white text-xs font-semibold tracking-wider uppercase">
+                    Completed
+                  </span>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
+          >
+            <div>
+              <span className="text-[#D4A574] text-sm font-medium tracking-wider uppercase">
+                Commercial • 2024
+              </span>
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#2C1810] mt-3 mb-4 tracking-tight">
+                The Grind Cafe
+              </h3>
+              <p className="text-[#5C4A3D]/70 text-lg leading-relaxed">
+                A complete commercial interior execution blending industrial chic with warm, organic textures. Custom joinery, handcrafted furniture, and acoustic solutions designed to create an inviting community hub.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap gap-3">
+              <span className="px-4 py-2 bg-[#2C1810]/5 text-[#2C1810] text-sm font-medium rounded-full">
+                Custom Joinery
+              </span>
+              <span className="px-4 py-2 bg-[#2C1810]/5 text-[#2C1810] text-sm font-medium rounded-full">
+                Furniture Design
+              </span>
+              <span className="px-4 py-2 bg-[#2C1810]/5 text-[#2C1810] text-sm font-medium rounded-full">
+                Interior Execution
+              </span>
+            </div>
+            
+            <div className="pt-4">
+              <div className="flex items-center gap-3 text-[#5C4A3D]/60">
+                <div className="w-2 h-2 rounded-full bg-[#D4A574]" />
+                <span className="text-sm">Tellapur, Hyderabad</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-16 lg:mt-24"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-20 lg:mt-32"
         >
-          <p className="text-[#5C4A3D]/50 text-sm font-light italic">
-            More transformative projects in progress...
-          </p>
+          <div className="bg-gradient-to-br from-[#2C1810] to-[#1a0f0a] rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D4A574]/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+            </div>
+            
+            <div className="relative">
+              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-[#D4A574]" />
+              </div>
+              
+              <h3 className="text-3xl sm:text-4xl font-light text-white mb-4 tracking-tight">
+                Coming Soon
+              </h3>
+              
+              <p className="text-white/60 text-lg max-w-md mx-auto leading-relaxed">
+                More transformative projects are currently in the works. Stay tuned for our upcoming showcase of exceptional spaces.
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
