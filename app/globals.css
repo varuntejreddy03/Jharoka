@@ -2,8 +2,8 @@
 
 @theme {
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-heading);
-  --font-display: var(--font-display);
+  --font-serif: var(--font-inter);
+  --font-display: var(--font-inter);
 
   --color-jharoka-cream: #FDFBF7;
   --color-jharoka-cream-dim: #F8F5EF;

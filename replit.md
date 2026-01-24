@@ -11,13 +11,8 @@ This is a Next.js 16 website for Jharoka Heritage Furniture, showcasing traditio
 
 ## Project Structure
 - `app/` - Next.js App Router pages and layouts
-  - `about/` - About page
   - `category/[slug]/` - Category detail pages (shows products by category)
-  - `collections/` - Collections page (shows all categories)
-  - `contact/` - Contact page
-  - `portfolio/` - Portfolio page
   - `product/[id]/` - Product detail pages with image gallery
-  - `services/` - Services page
 - `components/` - Reusable React components
   - `home/` - Homepage components
   - `layout/` - Navbar, Footer, WhatsApp button

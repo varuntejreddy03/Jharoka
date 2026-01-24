@@ -8,7 +8,7 @@ import { ArrowRight, MapPin, Calendar, ArrowUpRight } from "lucide-react";
 
 export default function PortfolioHighlights() {
   return (
-    <Section background="cream" id="projects" className="py-24 lg:py-32">
+    <Section background="cream" id="portfolio" className="py-24 lg:py-32">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
 
         {/* 1. Section Header */}

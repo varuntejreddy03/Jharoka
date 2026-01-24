@@ -1,25 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -41,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} ${cormorant.variable} antialiased bg-jharoka-cream text-jharoka-burgundy-900 font-sans`}
+        className={`${inter.variable} antialiased bg-jharoka-cream text-jharoka-burgundy-900 font-sans`}
       >
         {children}
       </body>
