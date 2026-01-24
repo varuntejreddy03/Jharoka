@@ -77,12 +77,12 @@ npm run start
 - `postcss.config.mjs` - PostCSS with Tailwind
 
 ## Recent Changes
-- **Jan 2026**: Collections page redesign
-  - Clean image-only gallery layout (no prices, descriptions, or buttons)
-  - Images loaded from /public/output/{category}/ folders
-  - Responsive grid: 4 columns desktop, 2 mobile
-  - Soft shadows, rounded corners, hover zoom effect
-  - Collection sections with heading and piece count
+- **Jan 2026**: Category pages premium redesign
+  - Removed separate /collections page - categories accessed directly from homepage
+  - Large watermark text background effect for premium feel
+  - Combined images from products.json and /public/output/{category}/ folders
+  - Elegant image cards with hover overlay and zoom effects
+  - "X Curated Pieces" count with decorative elements
   - Services section moved to homepage as dark premium inline section
 - **Jan 2026**: UI/UX improvements
   - Simplified Hero to video-only arch display with play/pause and mute controls

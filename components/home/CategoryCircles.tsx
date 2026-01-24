@@ -68,30 +68,6 @@ export default function CategoryCircles() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-14 sm:mt-20"
-        >
-          <Link 
-            href="/collections"
-            className="inline-flex items-center gap-3 text-[#8B4513] font-semibold text-sm sm:text-base hover:gap-4 transition-all duration-300 group"
-          >
-            <span className="border-b-2 border-[#8B4513]/30 group-hover:border-[#8B4513] transition-colors pb-0.5">
-              View All Collections
-            </span>
-            <svg 
-              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
