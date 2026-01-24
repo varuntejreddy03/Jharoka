@@ -76,11 +76,20 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="text-white text-lg font-medium mb-2">Visit Our Studio</h3>
-                  <p className="text-white/50 leading-relaxed">
+                  <p className="text-white/50 leading-relaxed mb-4">
                     Plot No. 123, Road No. 36<br />
                     Kavuri Hills, Hyderabad<br />
                     Telangana 500033
                   </p>
+                  <a 
+                    href="https://www.google.com/maps/dir//Jharoka+-+Period+Furniture+Store,+Hyderabad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#D4A574] text-[#2C1810] text-sm font-medium rounded-lg hover:bg-[#C49A6C] transition-all"
+                  >
+                    Get Directions
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
 

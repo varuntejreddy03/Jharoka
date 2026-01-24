@@ -76,11 +76,16 @@ export default function Hero() {
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-              <Link href="/contact" className="group flex items-center gap-2 px-4 py-2">
+              <a 
+                href="https://www.google.com/maps/dir//Jharoka+-+Period+Furniture+Store,+Hyderabad" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-4 py-2"
+              >
                 <span className="text-[#2C1810] text-sm sm:text-base font-medium border-b-2 border-transparent hover:border-[#8B4513] transition-all">
-                  Visit Showroom
+                  Get Directions
                 </span>
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div
