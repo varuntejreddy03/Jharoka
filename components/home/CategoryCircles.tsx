@@ -7,7 +7,7 @@ import categories from "@/data/categories.json";
 
 export default function CategoryCircles() {
   return (
-    <section className="py-20 lg:py-32 bg-[#FAF8F5]">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="container-premium">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,49 +27,42 @@ export default function CategoryCircles() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-8 sm:gap-10 lg:gap-12">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ 
-                duration: 0.7, 
-                delay: index * 0.1,
+                duration: 0.6, 
+                delay: index * 0.08,
                 ease: [0.22, 1, 0.36, 1]
               }}
             >
               <Link 
                 href={`/category/${category.slug}`}
-                className="block group"
+                className="block group text-center"
               >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-2xl transition-all duration-500">
-                  <Image
-                    src={category.image}
-                    alt={category.name}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    priority={index < 3}
-                  />
+                <div className="relative mx-auto w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 mb-4 sm:mb-5">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#D4A574]/30 to-[#8B4513]/20 transform group-hover:scale-110 transition-transform duration-500 opacity-0 group-hover:opacity-100" />
                   
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/80 via-[#2C1810]/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
-                  
-                  <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-6 lg:p-8">
-                    <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
-                      <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl text-white mb-1.5">
-                        {category.name}
-                      </h3>
-                      <div className="flex items-center gap-2 text-white/70 text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span>Explore Collection</span>
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
-                    </div>
+                  <div className="absolute inset-0 rounded-full overflow-hidden bg-[#FAF8F5] border-4 border-white shadow-lg group-hover:shadow-2xl transition-all duration-500">
+                    <Image
+                      src={category.image}
+                      alt={category.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 640px) 96px, (max-width: 1024px) 128px, 160px"
+                    />
                   </div>
+                  
+                  <div className="absolute inset-0 rounded-full border-2 border-[#D4A574]/0 group-hover:border-[#D4A574]/50 transition-all duration-500" />
                 </div>
+                
+                <h3 className="font-serif text-sm sm:text-base lg:text-lg font-medium text-[#2C1810] group-hover:text-[#8B4513] transition-colors duration-300">
+                  {category.name}
+                </h3>
               </Link>
             </motion.div>
           ))}
@@ -84,11 +77,13 @@ export default function CategoryCircles() {
         >
           <Link 
             href="/collections"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#2C1810] text-white font-medium text-sm sm:text-base rounded-full hover:bg-[#3D251A] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-3 text-[#8B4513] font-semibold text-sm sm:text-base hover:gap-4 transition-all duration-300 group"
           >
-            <span>View All Collections</span>
+            <span className="border-b-2 border-[#8B4513]/30 group-hover:border-[#8B4513] transition-colors pb-0.5">
+              View All Collections
+            </span>
             <svg 
-              className="w-5 h-5" 
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
