@@ -35,7 +35,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
       >
         <Link 
           href="/" 
-          className="inline-flex items-center gap-2 text-sm text-[#5C4A3D]/60 hover:text-[#8B4513] transition-colors duration-300 group"
+          className="inline-flex items-center gap-3 px-5 py-3 bg-[#2C1810] text-white text-sm font-medium rounded-full hover:bg-[#8B4513] transition-all duration-300 group shadow-lg hover:shadow-xl"
         >
           <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
           Back to Home
