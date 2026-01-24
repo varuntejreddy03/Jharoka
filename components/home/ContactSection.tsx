@@ -213,6 +213,27 @@ export default function ContactSection() {
             </form>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-16 lg:mt-24"
+        >
+          <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.336453962512!2d78.39702840000001!3d17.4436033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb911a20e1f4b9%3A0xf69ceab74edce0e!2sJharoka%20-%20Period%20Furniture%20Store!5e0!3m2!1sen!2sin!4v1769240380203!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
