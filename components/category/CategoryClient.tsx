@@ -31,13 +31,13 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="mb-8 sm:mb-12"
+        className="mb-10 sm:mb-14"
       >
         <Link 
           href="/" 
-          className="inline-flex items-center gap-2 text-sm text-jharoka-text-secondary hover:text-jharoka-burgundy transition-colors group"
+          className="inline-flex items-center gap-2 text-sm text-[#5C4A3D]/60 hover:text-[#8B4513] transition-colors duration-300 group"
         >
-          <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
           Back to Home
         </Link>
       </motion.div>
@@ -46,41 +46,61 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        className="relative mb-16 sm:mb-24"
+        className="relative mb-20 sm:mb-28"
       >
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <span className="font-serif text-[12rem] sm:text-[18rem] lg:text-[24rem] font-bold text-[#2C1810]/[0.03] leading-none select-none whitespace-nowrap">
+          <span className="font-serif text-[10rem] sm:text-[16rem] lg:text-[22rem] font-bold text-[#2C1810]/[0.025] leading-none select-none whitespace-nowrap">
             {category.name}
           </span>
         </div>
         
-        <div className="relative text-center py-12 sm:py-20">
+        <div className="relative text-center py-16 sm:py-24">
           <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: 80 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="h-[1px] bg-[#D4A574] mx-auto mb-8"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="h-[1px] w-20 bg-gradient-to-r from-transparent via-[#D4A574] to-transparent mx-auto mb-10"
           />
           
-          <span className="inline-block text-[#D4A574] text-xs sm:text-sm font-semibold tracking-[0.4em] uppercase mb-6">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="inline-block text-[#D4A574] text-[11px] sm:text-xs font-semibold tracking-[0.5em] uppercase mb-8"
+          >
             The Collection
-          </span>
+          </motion.span>
           
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2C1810] mb-6 sm:mb-8 leading-none">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2C1810] mb-8 leading-[0.9] tracking-tight"
+          >
             {category.name}
-          </h1>
+          </motion.h1>
           
-          <p className="text-lg sm:text-xl text-[#5C4A3D]/70 max-w-2xl mx-auto leading-relaxed mb-6">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-lg sm:text-xl text-[#5C4A3D]/60 max-w-xl mx-auto leading-relaxed font-light"
+          >
             {category.description}
-          </p>
+          </motion.p>
           
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-[1px] w-12 bg-[#D4A574]/50" />
-            <span className="text-sm text-[#8B4513] font-medium tracking-wider">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="flex items-center justify-center gap-5 mt-10"
+          >
+            <div className="h-[1px] w-16 bg-[#D4A574]/40" />
+            <span className="text-[13px] text-[#8B4513] font-medium tracking-[0.2em] uppercase">
               {items.length} Curated Pieces
             </span>
-            <div className="h-[1px] w-12 bg-[#D4A574]/50" />
-          </div>
+            <div className="h-[1px] w-16 bg-[#D4A574]/40" />
+          </motion.div>
         </div>
       </motion.div>
 
@@ -89,14 +109,14 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center py-24"
+          className="text-center py-32"
         >
-          <p className="text-[#5C4A3D]/70 text-lg mb-8">
+          <p className="text-[#5C4A3D]/50 text-lg mb-10 font-light">
             This collection is being curated. Check back soon.
           </p>
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C1810] text-white rounded-full hover:bg-[#3D251A] transition-colors"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-[#2C1810] text-white text-sm tracking-wider rounded-full hover:bg-[#3D251A] transition-all duration-300"
           >
             <ChevronLeft className="w-4 h-4" />
             Explore Other Categories
@@ -106,47 +126,41 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-14"
         >
           {items.map((item, index) => (
             <motion.div
               key={`${item.type}-${item.src}`}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.7, 
-                delay: 0.3 + index * 0.08,
+                duration: 0.8, 
+                delay: 0.5 + index * 0.1,
                 ease: [0.22, 1, 0.36, 1]
               }}
-              className="group"
+              className="group cursor-pointer"
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-700">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-[#F5F3F0] shadow-[0_4px_30px_rgba(44,24,16,0.08)] hover:shadow-[0_20px_60px_rgba(44,24,16,0.15)] transition-all duration-500 ease-out">
                 <Image
                   src={item.src}
                   alt={item.name}
                   fill
-                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.06]"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0a]/50 via-[#1a0f0a]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-serif text-lg sm:text-xl">
+                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                  <p className="text-white font-serif text-xl sm:text-2xl tracking-wide leading-tight">
                     {item.name}
                   </p>
                 </div>
-
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/0 group-hover:bg-white/90 flex items-center justify-center transition-all duration-500 opacity-0 group-hover:opacity-100">
-                  <svg className="w-5 h-5 text-[#2C1810]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-                  </svg>
-                </div>
               </div>
               
-              <div className="mt-4 text-center">
-                <p className="font-serif text-lg text-[#2C1810] group-hover:text-[#8B4513] transition-colors duration-300">
+              <div className="mt-6 text-center">
+                <p className="font-serif text-lg sm:text-xl text-[#2C1810]/80 tracking-[0.02em] group-hover:text-[#8B4513] transition-colors duration-300">
                   {item.name}
                 </p>
               </div>
@@ -158,15 +172,15 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="text-center mt-20 sm:mt-28"
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="text-center mt-24 sm:mt-32 pb-8"
       >
         <Link 
           href="/"
-          className="inline-flex items-center gap-3 text-[#8B4513] font-medium hover:gap-4 transition-all group"
+          className="inline-flex items-center gap-3 text-[#8B4513]/80 font-medium text-sm tracking-wider hover:text-[#8B4513] hover:gap-4 transition-all duration-300 group"
         >
-          <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-          <span className="border-b border-[#8B4513]/30 group-hover:border-[#8B4513] pb-0.5">
+          <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
+          <span className="border-b border-[#8B4513]/20 group-hover:border-[#8B4513]/60 pb-1 transition-colors duration-300">
             Browse All Categories
           </span>
         </Link>
