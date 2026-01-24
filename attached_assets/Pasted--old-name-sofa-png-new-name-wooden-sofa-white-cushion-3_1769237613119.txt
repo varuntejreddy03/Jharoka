@@ -1,0 +1,97 @@
+[
+  {
+    "old_name": "sofa.png",
+    "new_name": "wooden-sofa-white-cushion-3-seater.png",
+    "category": "Sofas"
+  },
+  {
+    "old_name": "sofa1.png",
+    "new_name": "modern-wooden-sofa-sage-green-cushions.png",
+    "category": "Sofas"
+  },
+  {
+    "old_name": "sofa2.png",
+    "new_name": "minimal-wooden-sofa-light-green-fabric.png",
+    "category": "Sofas"
+  },
+  {
+    "old_name": "sofa3.png",
+    "new_name": "luxury-accent-armchair-purple-fabric.png",
+    "category": "Sofas"
+  },
+
+  {
+    "old_name": "chairs1.png",
+    "new_name": "wooden-arm-chair-white-cushion.png",
+    "category": "Chairs"
+  },
+  {
+    "old_name": "chairs2.png",
+    "new_name": "cane-back-accent-chair-patterned-seat.png",
+    "category": "Chairs"
+  },
+  {
+    "old_name": "chairs3.png",
+    "new_name": "upholstered-armchair-green-pattern.png",
+    "category": "Chairs"
+  },
+  {
+    "old_name": "chairs5.png",
+    "new_name": "high-back-cane-accent-chair.png",
+    "category": "Chairs"
+  },
+  {
+    "old_name": "chairs6.png",
+    "new_name": "wooden-lounge-chair-patterned-fabric.png",
+    "category": "Chairs"
+  },
+  {
+    "old_name": "chairwithtea.png",
+    "new_name": "accent-chair-with-tea-table.png",
+    "category": "Chairs"
+  },
+  {
+    "old_name": "chair4withteapoe.png",
+    "new_name": "two-chairs-with-round-tea-table.png",
+    "category": "Chairs"
+  },
+
+  {
+    "old_name": "bed3.png",
+    "new_name": "wooden-chaise-lounge-bed-white-cushion.png",
+    "category": "Beds"
+  },
+
+  {
+    "old_name": "dinetable.png",
+    "new_name": "round-wooden-dining-table-4-seater.png",
+    "category": "Dining Tables"
+  },
+  {
+    "old_name": "dinetable2.png",
+    "new_name": "modern-dining-table-with-chairs.png",
+    "category": "Dining Tables"
+  },
+
+  {
+    "old_name": "otherfurniture.png",
+    "new_name": "wooden-wardrobe-carved-storage-cabinet.png",
+    "category": "Wardrobes"
+  },
+  {
+    "old_name": "otherfurniture (2).png",
+    "new_name": "antique-wooden-wardrobe-handcrafted.png",
+    "category": "Wardrobes"
+  },
+
+  {
+    "old_name": "teapoe.png",
+    "new_name": "round-office-coffee-table-modern.png",
+    "category": "Office Furniture"
+  },
+  {
+    "old_name": "teapoe (2).png",
+    "new_name": "nesting-office-coffee-tables-set.png",
+    "category": "Office Furniture"
+  }
+]
