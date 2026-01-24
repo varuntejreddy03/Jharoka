@@ -1,282 +1,181 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowRight,
-  Compass,
-  Hammer,
-  Leaf,
-  Home,
-  Coffee,
-  Building,
-  Crown,
-  CheckCircle2,
-  Users,
-  Palette,
-  Ruler
-} from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { motion } from "framer-motion";
+import { Home, Coffee, Building, ArrowUpRight, Sparkles, Shield, Clock } from "lucide-react";
+import Image from "next/image";
 
-// Top Categories (filters/context)
-const categories = [
-  { id: "residences", label: "Luxury Residences", icon: Home },
-  { id: "cafes", label: "Boutique Cafés", icon: Coffee },
-  { id: "hotels", label: "Heritage Hotels", icon: Building },
-  { id: "suites", label: "Royal Suites", icon: Crown }
-];
-
-// Main Disciplines Content
-const disciplines = [
+const services = [
   {
-    id: "01",
-    title: "Interior Mastery",
-    subtitle: "The Art of Space Transformation",
-    description: "We blend three generations of heritage wisdom with contemporary vision. Our approach honors the architectural shell while introducing layers of comfort, narrative, and bespoke luxury.",
-    icon: Compass,
-    highlights: [
-      { label: "Spatial Planning", icon: Ruler },
-      { label: "Heritage Fusion", icon: Building },
-      { label: "Color Psychology", icon: Palette },
-      { label: "Artisan Coordination", icon: Users }
-    ],
-    features: [
-      "Bespoke Furniture Design",
-      "Lighting Architecture",
-      "Material Curation",
-      "Art Selection & Styling"
-    ],
-    color: "bg-[#2C2420]", // Deep Walnut
-    accent: "text-[#B8956A]"
+    id: "residences",
+    title: "Luxury Residences",
+    subtitle: "Transform Your Living Space",
+    description: "Bespoke furniture solutions for discerning homeowners. We craft pieces that become the soul of your residence, blending heritage craftsmanship with modern comfort.",
+    icon: Home,
+    image: "/productpics/bigsofa1.png",
+    features: ["Custom Design", "Space Planning", "Heritage Pieces"],
+    accent: "from-[#2C1810] to-[#4A3228]"
   },
   {
-    id: "02",
-    title: "Architectural Vision",
-    subtitle: "Structural Poetry in Wood & Stone",
-    description: "Architectural solutions rooted in traditional Indian principles, elevated through modern innovation. Every structure becomes a testament to timeless design philosophy, engineered for longevity.",
-    icon: Hammer,
-    highlights: [
-      { label: "Structural Integrity", icon: Ruler },
-      { label: "Sustainable Design", icon: Leaf },
-      { label: "Cultural Integration", icon: Crown },
-      { label: "Modern Engineering", icon: Compass }
-    ],
-    features: [
-      "Heritage Restoration",
-      "Sustainable Materials",
-      "Structural Consulting",
-      "Site Analysis"
-    ],
-    color: "bg-[#3A322C]", // Stone Grey-Brown
-    accent: "text-[#C5B3A6]"
+    id: "cafes",
+    title: "Boutique Cafés",
+    subtitle: "Create Memorable Experiences",
+    description: "Distinctive furniture that defines your café's character. From intimate seating to statement pieces, we help create spaces where every visit becomes a memory.",
+    icon: Coffee,
+    image: "/productpics/smallsofa1.png",
+    features: ["Commercial Grade", "Unique Aesthetics", "Durable Materials"],
+    accent: "from-[#8B4513] to-[#A0522D]"
   },
   {
-    id: "03",
-    title: "Landscape Harmony",
-    subtitle: "Gardens as Living Art",
-    description: "Creating outdoor sanctuaries that complement architectural beauty. From serene meditation gardens to vibrant commercial landscapes that inspire and rejuvenate the spirit.",
-    icon: Leaf,
-    highlights: [
-      { label: "Native Flora", icon: Leaf },
-      { label: "Water Features", icon: Coffee }, // Metaphorical
-      { label: "Outdoor Living", icon: Home },
-      { label: "Seasonal Planning", icon: Compass }
-    ],
-    features: [
-      "Zen Garden Design",
-      "Hardscaping",
-      "Irrigation Systems",
-      "Lighting Design"
-    ],
-    color: "bg-[#4A423C]", // Earthy Taupe
-    accent: "text-[#D6C4B8]"
+    id: "hotels",
+    title: "Heritage Hotels",
+    subtitle: "Timeless Hospitality Design",
+    description: "Grand furniture collections for heritage properties. We understand the delicate balance between preserving history and providing modern luxury.",
+    icon: Building,
+    image: "/productpics/bed1.png",
+    features: ["Bulk Orders", "Period Accurate", "Premium Quality"],
+    accent: "from-[#4A2C2A] to-[#6B4442]"
   }
 ];
 
+const stats = [
+  { icon: Sparkles, value: "500+", label: "Projects Delivered" },
+  { icon: Shield, value: "25+", label: "Years Experience" },
+  { icon: Clock, value: "100%", label: "Client Satisfaction" }
+];
+
 export default function ServicesOverview() {
-  const [activeCategory, setActiveCategory] = useState("residences");
-  const [activeDiscipline, setActiveDiscipline] = useState(0);
-
   return (
-    <section id="services" className="bg-[#FBF9F6] py-24 lg:py-32 relative overflow-hidden">
+    <section id="services" className="section-padding bg-[#FDFBF7] relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#8B4513]/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#D4A574]/10 rounded-full blur-[120px]" />
+      </div>
 
-      {/* 1. Section Header */}
-      <motion.div
-        className="max-w-[1440px] mx-auto px-6 lg:px-12 text-center mb-20"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="font-serif text-5xl lg:text-7xl text-[#2C2420] mb-6 leading-tight">
-          Crafting <span className="text-[#8B5A2B] italic font-light">Legacies</span>
-        </h2>
-        <p className="text-lg text-[#6B5A4E] max-w-2xl mx-auto leading-relaxed">
-          Our integrated approach unites three distinct disciplines to create cohesive, living environments that stand the test of time.
-        </p>
-      </motion.div>
+      <div className="container-premium relative z-10">
+        <motion.div
+          className="text-center mb-16 lg:mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <span className="section-label">Our Services</span>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2C1810] mb-6 leading-tight">
+            Crafting <span className="text-[#8B4513] italic font-light">Legacies</span>
+          </h2>
+          <p className="text-base sm:text-lg text-[#5D4E47] max-w-2xl mx-auto leading-relaxed">
+            Our integrated approach unites three distinct disciplines to create cohesive, living environments that stand the test of time.
+          </p>
+        </motion.div>
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-
-        {/* 2. Category Selector */}
-        <div className="flex justify-center mb-16 overflow-x-auto pb-4 scrollbar-hide">
-          <div className="bg-white/50 backdrop-blur-sm p-2 rounded-full border border-[#8B5A2B]/10 flex gap-2">
-            {categories.map((cat) => {
-              const Icon = cat.icon;
-              const isActive = activeCategory === cat.id;
-
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${isActive
-                      ? "bg-[#2C2420] text-white shadow-lg shadow-[#2C2420]/10"
-                      : "text-[#6B5A4E] hover:bg-white hover:text-[#2C2420]"
-                    }`}
-                >
-                  <Icon className={`w-4 h-4 ${isActive ? "text-[#B8956A]" : "opacity-50"}`} />
-                  <span className="whitespace-nowrap">{cat.label}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Main Content Area */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch h-full">
-
-          {/* 3. Feature Highlight Area (Left) */}
-          <motion.div
-            className="lg:col-span-7 h-full"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeDiscipline}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.4 }}
-                className={`h-full min-h-[600px] rounded-[2rem] p-10 lg:p-14 relative overflow-hidden flex flex-col justify-between ${disciplines[activeDiscipline].color}`}
-              >
-                {/* Abstract Background Elements - No Images */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/20 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
-
-                {/* Top Content */}
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-8">
-                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5 backdrop-blur-md">
-                      {React.createElement(disciplines[activeDiscipline].icon, {
-                        className: `w-5 h-5 ${disciplines[activeDiscipline].accent}`
-                      })}
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.15,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              className="group"
+            >
+              <div className="bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col border border-[#E8E0D5]">
+                <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.accent} opacity-90 z-10`} />
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  
+                  <div className="absolute inset-0 z-20 p-6 sm:p-8 flex flex-col justify-between">
+                    <div className="flex items-center justify-between">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                        <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                      </div>
+                      <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300 border border-white/30">
+                        <ArrowUpRight className="w-5 h-5 text-white" />
+                      </div>
                     </div>
-                    <span className={`text-xs font-bold tracking-[0.2em] uppercase ${disciplines[activeDiscipline].accent}`}>
-                      Discipline {disciplines[activeDiscipline].id}
-                    </span>
+                    
+                    <div>
+                      <h3 className="font-serif text-2xl sm:text-3xl text-white mb-2 font-medium">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/80 text-sm sm:text-base font-light">
+                        {service.subtitle}
+                      </p>
+                    </div>
                   </div>
+                </div>
 
-                  <h3 className="font-serif text-4xl lg:text-5xl text-white mb-6 leading-tight">
-                    {disciplines[activeDiscipline].title}
-                  </h3>
-                  <p className="text-white/80 text-lg leading-relaxed max-w-xl">
-                    {disciplines[activeDiscipline].description}
+                <div className="p-6 sm:p-8 flex-1 flex flex-col">
+                  <p className="text-[#5D4E47] text-sm sm:text-base leading-relaxed mb-6 flex-1">
+                    {service.description}
                   </p>
-                </div>
 
-                {/* Bottom Stats / Grid */}
-                <div className="relative z-10 mt-12 pt-12 border-t border-white/10">
-                  <div className="grid grid-cols-2 gap-8">
-                    <div className="space-y-6">
-                      <span className="text-xs text-white/40 uppercase tracking-widest font-medium">Core Focus</span>
-                      <div className="space-y-4">
-                        {disciplines[activeDiscipline].features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-3">
-                            <CheckCircle2 className={`w-5 h-5 ${disciplines[activeDiscipline].accent}`} />
-                            <span className="text-white/90 text-sm font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="space-y-6">
-                      <span className="text-xs text-white/40 uppercase tracking-widest font-medium">Competencies</span>
-                      <div className="grid grid-cols-2 gap-4">
-                        {disciplines[activeDiscipline].highlights.map((item, idx) => (
-                          <div key={idx} className="bg-white/5 rounded-xl p-4 backdrop-blur-sm border border-white/5 hover:bg-white/10 transition-colors">
-                            <item.icon className={`w-5 h-5 ${disciplines[activeDiscipline].accent} mb-3`} />
-                            <span className="text-white/90 text-xs font-medium block">{item.label}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 bg-[#F8F5EF] text-[#8B4513] text-xs sm:text-sm font-medium rounded-full border border-[#E8DCD0]"
+                      >
+                        {feature}
+                      </span>
+                    ))}
                   </div>
                 </div>
-
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-
-
-          {/* 4. Right Area - Vertical Stack & 5. Info Blocks */}
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-4">
-            {disciplines.map((discipline, index) => {
-              const isActive = activeDiscipline === index;
-
-              return (
-                <motion.div
-                  key={discipline.id}
-                  onClick={() => setActiveDiscipline(index)}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index }}
-                  className={`group cursor-pointer rounded-2xl transition-all duration-500 border ${isActive
-                      ? "bg-white border-[#8B5A2B]/10 shadow-xl scale-[1.02]"
-                      : "bg-transparent border-transparent hover:bg-white/50 hover:border-[#8B5A2B]/5"
-                    }`}
-                >
-                  <div className="p-6 lg:p-8 flex items-start gap-6">
-                    <span
-                      className={`text-xl font-serif font-bold transition-colors duration-300 ${isActive ? "text-[#8B5A2B]" : "text-[#6B5A4E]/30"
-                        }`}
-                    >
-                      {discipline.id}
-                    </span>
-
-                    <div className="flex-1">
-                      <h4
-                        className={`text-xl font-bold mb-2 transition-colors duration-300 ${isActive ? "text-[#2C2420]" : "text-[#6B5A4E]"
-                          }`}
-                      >
-                        {discipline.title}
-                      </h4>
-
-                      <div
-                        className={`overflow-hidden transition-all duration-500 ${isActive ? "max-h-24 opacity-100 mt-2" : "max-h-0 opacity-0"
-                          }`}
-                      >
-                        <p className="text-[#6B5A4E] text-sm leading-relaxed">
-                          {discipline.subtitle}
-                        </p>
-                      </div>
-                    </div>
-
-                    <ArrowRight
-                      className={`w-5 h-5 transition-all duration-300 ${isActive
-                          ? "text-[#8B5A2B] translate-x-0"
-                          : "text-[#6B5A4E]/30 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0"
-                        }`}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="bg-gradient-to-br from-[#2C1810] to-[#4A3228] rounded-2xl lg:rounded-3xl p-8 sm:p-10 lg:p-14"
+        >
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <h3 className="font-serif text-2xl sm:text-3xl text-white mb-3 font-medium">
+                Why Choose Us?
+              </h3>
+              <p className="text-white/70 text-sm sm:text-base leading-relaxed">
+                Three generations of master craftsmen creating furniture that becomes family heirlooms.
+              </p>
+            </div>
+            
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                className="text-center lg:text-left"
+              >
+                <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
+                    <stat.icon className="w-5 h-5 text-[#D4A574]" />
+                  </div>
+                  <span className="text-3xl sm:text-4xl font-serif text-white font-semibold">
+                    {stat.value}
+                  </span>
+                </div>
+                <p className="text-white/60 text-sm font-medium">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
