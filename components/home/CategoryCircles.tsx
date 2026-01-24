@@ -26,7 +26,7 @@ export default function CategoryCircles() {
           <span className="inline-block text-[#8B4513] text-[11px] sm:text-xs font-semibold tracking-[0.4em] uppercase mb-6">
             Explore Our Range
           </span>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-[#2C1810] mb-6 tracking-tight">
+          <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-light text-[#2C1810] mb-6 tracking-tight">
             Shop by Category
           </h2>
           <p className="text-base sm:text-lg text-[#5C4A3D]/60 max-w-lg mx-auto font-light">
@@ -73,7 +73,7 @@ export default function CategoryCircles() {
                 </div>
                 
                 <div className="space-y-1">
-                  <h3 className="font-serif text-base sm:text-lg font-medium text-[#2C1810] group-hover:text-[#8B4513] transition-colors duration-300 tracking-wide">
+                  <h3 className="font-sans text-base sm:text-lg font-medium text-[#2C1810] group-hover:text-[#8B4513] transition-colors duration-300 tracking-wide">
                     {category.name}
                   </h3>
                   <div className="w-0 h-[1px] bg-[#D4A574] mx-auto group-hover:w-8 transition-all duration-500" />

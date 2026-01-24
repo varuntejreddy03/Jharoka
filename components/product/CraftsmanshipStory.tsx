@@ -4,7 +4,7 @@ export default function CraftsmanshipStory() {
       <div className="max-w-[1600px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="font-serif text-4xl text-[#2C2420] mb-6">Materials & Craftsmanship</h2>
+            <h2 className="font-sans text-4xl text-[#2C2420] mb-6">Materials & Craftsmanship</h2>
             <p className="text-[#6B5D54] text-lg leading-relaxed mb-8">
               Each Heritage Platform Bed is crafted from sustainably sourced solid teak, selected for its exceptional grain and durability.
             </p>
@@ -54,13 +54,13 @@ export default function CraftsmanshipStory() {
 
           <div className="bg-[#F5F3EF] p-12 rounded-sm">
             <p className="text-[#B8956A] text-sm tracking-[0.2em] uppercase mb-4">Artisan Story</p>
-            <h3 className="font-serif text-2xl text-[#2C2420] mb-4">Three Generations of Mastery</h3>
+            <h3 className="font-sans text-2xl text-[#2C2420] mb-4">Three Generations of Mastery</h3>
             <p className="text-[#6B5D54] leading-relaxed mb-6">
               Our lead craftsman, Ravi Kumar, learned these techniques from his grandfather. His family has been creating heirloom furniture for over 60 years in Rajasthan.
             </p>
             <div className="border-t border-[#E5DFD6] pt-6">
               <p className="text-sm text-[#9B8B7E]">Legacy Since</p>
-              <p className="text-2xl font-serif text-[#2C2420]">1963</p>
+              <p className="text-2xl font-sans text-[#2C2420]">1963</p>
             </div>
           </div>
         </div>

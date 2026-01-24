@@ -60,7 +60,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <div className="bg-jharoka-cream min-h-screen">
         <Navbar />
         <main className="pt-32 text-center container-premium">
-          <h1 className="font-serif text-4xl text-jharoka-burgundy-900 mb-4">Category not found</h1>
+          <h1 className="font-sans text-4xl text-jharoka-burgundy-900 mb-4">Category not found</h1>
           <Link href="/collections" className="text-jharoka-burgundy hover:underline inline-flex items-center gap-2">
             <ChevronRight className="w-4 h-4 rotate-180" />
             Back to Collections

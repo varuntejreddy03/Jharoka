@@ -49,7 +49,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
         className="relative mb-20 sm:mb-28"
       >
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <span className="font-serif text-[10rem] sm:text-[16rem] lg:text-[22rem] font-bold text-[#2C1810]/[0.025] leading-none select-none whitespace-nowrap">
+          <span className="font-sans text-[10rem] sm:text-[16rem] lg:text-[22rem] font-bold text-[#2C1810]/[0.025] leading-none select-none whitespace-nowrap">
             {category.name}
           </span>
         </div>
@@ -75,7 +75,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2C1810] mb-8 leading-[0.9] tracking-tight"
+            className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2C1810] mb-8 leading-[0.9] tracking-tight"
           >
             {category.name}
           </motion.h1>
@@ -165,7 +165,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
                           View Details
                         </span>
                       </div>
-                      <p className="text-white font-serif text-xl sm:text-2xl tracking-wide leading-snug">
+                      <p className="text-white font-sans text-xl sm:text-2xl tracking-wide leading-snug">
                         {item.name}
                       </p>
                     </div>
@@ -176,7 +176,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
               </div>
               
               <div className="mt-8 text-center">
-                <p className="font-serif text-xl text-[#2C1810]/80 tracking-[0.01em] group-hover:text-[#8B4513] transition-colors duration-400">
+                <p className="font-sans text-xl text-[#2C1810]/80 tracking-[0.01em] group-hover:text-[#8B4513] transition-colors duration-400">
                   {item.name}
                 </p>
                 <div className="w-0 h-[1px] bg-[#D4A574] mx-auto mt-3 group-hover:w-12 transition-all duration-500" />

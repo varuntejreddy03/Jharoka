@@ -82,7 +82,7 @@ export default function FeaturedCollections() {
             </span>
             <div className="w-12 h-px bg-jharoka-burgundy/30" />
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl text-jharoka-burgundy-900 leading-none font-bold uppercase tracking-tighter">
+          <h2 className="font-sans text-5xl md:text-6xl text-jharoka-burgundy-900 leading-none font-bold uppercase tracking-tighter">
             Curated <span className="text-jharoka-burgundy">Masterpieces</span>
           </h2>
         </motion.div>
@@ -165,7 +165,7 @@ export default function FeaturedCollections() {
                   <Sparkles className="w-5 h-5" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-jharoka-burgundy-900 mb-1">Meticulous Detail</h3>
+                  <h3 className="font-sans text-lg text-jharoka-burgundy-900 mb-1">Meticulous Detail</h3>
                   <p className="text-jharoka-burgundy-900/60 text-sm leading-relaxed">
                     Hand-finished by master artisans using techniques passed down for generations.
                   </p>
@@ -177,7 +177,7 @@ export default function FeaturedCollections() {
                   <ShieldCheck className="w-5 h-5" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg text-jharoka-burgundy-900 mb-1">Heritage Warranty</h3>
+                  <h3 className="font-sans text-lg text-jharoka-burgundy-900 mb-1">Heritage Warranty</h3>
                   <p className="text-jharoka-burgundy-900/60 text-sm leading-relaxed">
                     Every piece comes with a certificate of authenticity and structural warranty.
                   </p>
@@ -218,7 +218,7 @@ export default function FeaturedCollections() {
                     </div>
                   </div>
 
-                  <h2 className="font-serif text-4xl lg:text-5xl font-medium text-jharoka-burgundy-900 leading-[1.1]">
+                  <h2 className="font-sans text-4xl lg:text-5xl font-medium text-jharoka-burgundy-900 leading-[1.1]">
                     {currentProduct.name}
                   </h2>
 

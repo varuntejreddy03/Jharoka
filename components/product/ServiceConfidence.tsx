@@ -2,7 +2,7 @@ export default function ServiceConfidence() {
   return (
     <section className="bg-white py-20">
       <div className="max-w-[1600px] mx-auto px-8">
-        <h2 className="font-serif text-3xl text-[#2C2420] mb-12 text-center">Complete Peace of Mind</h2>
+        <h2 className="font-sans text-3xl text-[#2C2420] mb-12 text-center">Complete Peace of Mind</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center p-6">

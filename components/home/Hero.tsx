@@ -48,7 +48,7 @@ export default function Hero() {
               <span className="inline-block text-[#8B4513] text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mb-4 sm:mb-6">
                 Heritage Furniture
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[#2C1810] leading-[1.1] mb-4 sm:mb-6">
+              <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[#2C1810] leading-[1.1] mb-4 sm:mb-6">
                 <span className="block">Crafting</span>
                 <span className="block text-[#8B4513] italic font-light">Timeless</span>
                 <span className="block">Elegance</span>
@@ -90,17 +90,17 @@ export default function Hero() {
               className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 pt-4 sm:pt-6"
             >
               <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl font-serif font-semibold text-[#2C1810]">500+</div>
+                <div className="text-2xl sm:text-3xl font-sans font-semibold text-[#2C1810]">500+</div>
                 <div className="text-xs sm:text-sm text-[#7D6E66] font-medium">Pieces Crafted</div>
               </div>
               <div className="w-px h-10 sm:h-12 bg-[#8B4513]/20" />
               <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl font-serif font-semibold text-[#2C1810]">25+</div>
+                <div className="text-2xl sm:text-3xl font-sans font-semibold text-[#2C1810]">25+</div>
                 <div className="text-xs sm:text-sm text-[#7D6E66] font-medium">Years Legacy</div>
               </div>
               <div className="w-px h-10 sm:h-12 bg-[#8B4513]/20" />
               <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl font-serif font-semibold text-[#2C1810]">100%</div>
+                <div className="text-2xl sm:text-3xl font-sans font-semibold text-[#2C1810]">100%</div>
                 <div className="text-xs sm:text-sm text-[#7D6E66] font-medium">Handcrafted</div>
               </div>
             </motion.div>

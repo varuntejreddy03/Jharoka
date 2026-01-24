@@ -1,7 +1,7 @@
 export default function DimensionsGuide() {
   return (
     <section className="max-w-[1600px] mx-auto px-8 py-20">
-      <h2 className="font-serif text-3xl text-[#2C2420] mb-12 text-center">Size & Fit Guide</h2>
+      <h2 className="font-sans text-3xl text-[#2C2420] mb-12 text-center">Size & Fit Guide</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="bg-white p-8 rounded-sm border border-[#E5DFD6]">

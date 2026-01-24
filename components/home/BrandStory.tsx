@@ -40,7 +40,7 @@ export default function BrandStory() {
           >
             <div className="bg-white/95 backdrop-blur-sm p-4 shadow-xl border border-jharoka-burgundy/10">
               <p className="text-xs font-medium tracking-[0.2em] uppercase text-jharoka-burgundy mb-1">Est. 1987</p>
-              <p className="text-sm font-serif text-jharoka-burgundy-900">Three Generations of Mastery</p>
+              <p className="text-sm font-sans text-jharoka-burgundy-900">Three Generations of Mastery</p>
             </div>
           </motion.div>
         </motion.div>
@@ -60,7 +60,7 @@ export default function BrandStory() {
               Our Heritage
             </span>
             <h2 className="flex flex-col gap-2">
-              <span className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-tighter leading-none text-jharoka-burgundy-900 block">
+              <span className="font-sans text-4xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-tighter leading-none text-jharoka-burgundy-900 block">
                 Rooted in Culture.
               </span>
               <span className="font-[var(--font-display)] italic text-5xl lg:text-6xl xl:text-7xl text-jharoka-burgundy font-medium leading-[0.9] block">
@@ -88,7 +88,7 @@ export default function BrandStory() {
 
           {/* Quote */}
           <div className="bg-jharoka-burgundy/5 p-8 border-l-4 border-jharoka-burgundy">
-            <blockquote className="font-serif text-2xl text-jharoka-burgundy-900 italic leading-relaxed">
+            <blockquote className="font-sans text-2xl text-jharoka-burgundy-900 italic leading-relaxed">
               "Where heritage meets home, and every grain tells a story."
             </blockquote>
             <cite className="text-sm text-jharoka-burgundy/70 mt-4 block not-italic tracking-wide">

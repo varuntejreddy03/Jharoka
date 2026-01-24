@@ -30,7 +30,7 @@ export default function MapLocation() {
             <div className="w-8 h-px bg-jharoka-burgundy" />
           </div>
           
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-jharoka-burgundy-900 leading-tight mb-6">
+          <h2 className="font-sans text-4xl md:text-5xl font-bold text-jharoka-burgundy-900 leading-tight mb-6">
             Experience Heritage
             <span className="block text-jharoka-burgundy italic font-light">In Person</span>
           </h2>
@@ -53,7 +53,7 @@ export default function MapLocation() {
           >
             {/* Why Visit */}
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-jharoka-burgundy/10">
-              <h3 className="font-serif text-2xl font-bold text-jharoka-burgundy-900 mb-6">
+              <h3 className="font-sans text-2xl font-bold text-jharoka-burgundy-900 mb-6">
                 Why Visit Our Experience Center?
               </h3>
               
@@ -86,7 +86,7 @@ export default function MapLocation() {
 
             {/* Contact Information */}
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-jharoka-burgundy/10">
-              <h3 className="font-serif text-xl font-bold text-jharoka-burgundy-900 mb-6">Visit Information</h3>
+              <h3 className="font-sans text-xl font-bold text-jharoka-burgundy-900 mb-6">Visit Information</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -117,7 +117,7 @@ export default function MapLocation() {
 
             {/* Getting There */}
             <div className="bg-jharoka-burgundy/5 p-6 rounded-2xl border border-jharoka-burgundy/10">
-              <h4 className="font-serif text-lg font-semibold text-jharoka-burgundy-900 mb-4">Getting There</h4>
+              <h4 className="font-sans text-lg font-semibold text-jharoka-burgundy-900 mb-4">Getting There</h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Car className="w-4 h-4 text-jharoka-burgundy" />
@@ -144,7 +144,7 @@ export default function MapLocation() {
               <div className="bg-gradient-to-r from-jharoka-burgundy-900 to-jharoka-burgundy p-6 text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-serif text-xl font-bold mb-1">Jharoka Experience Center</h3>
+                    <h3 className="font-sans text-xl font-bold mb-1">Jharoka Experience Center</h3>
                     <p className="text-white/80 text-sm">Kavuri Hills, Hyderabad</p>
                   </div>
                   <Button 

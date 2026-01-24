@@ -1,7 +1,7 @@
 export default function TrustAuthority() {
   return (
     <section className="max-w-[1600px] mx-auto px-8 py-20 border-t border-[#E5DFD6]">
-      <h2 className="font-serif text-3xl text-[#2C2420] mb-12 text-center">Trusted by Connoisseurs</h2>
+      <h2 className="font-sans text-3xl text-[#2C2420] mb-12 text-center">Trusted by Connoisseurs</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-[#F5F3EF] p-8 rounded-sm">
@@ -37,19 +37,19 @@ export default function TrustAuthority() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <p className="text-3xl font-serif text-[#2C2420] mb-2">60+</p>
+          <p className="text-3xl font-sans text-[#2C2420] mb-2">60+</p>
           <p className="text-sm text-[#9B8B7E] uppercase tracking-wider">Years Legacy</p>
         </div>
         <div>
-          <p className="text-3xl font-serif text-[#2C2420] mb-2">500+</p>
+          <p className="text-3xl font-sans text-[#2C2420] mb-2">500+</p>
           <p className="text-sm text-[#9B8B7E] uppercase tracking-wider">Premium Homes</p>
         </div>
         <div>
-          <p className="text-3xl font-serif text-[#2C2420] mb-2">100%</p>
+          <p className="text-3xl font-sans text-[#2C2420] mb-2">100%</p>
           <p className="text-sm text-[#9B8B7E] uppercase tracking-wider">Handcrafted</p>
         </div>
         <div>
-          <p className="text-3xl font-serif text-[#2C2420] mb-2">Lifetime</p>
+          <p className="text-3xl font-sans text-[#2C2420] mb-2">Lifetime</p>
           <p className="text-sm text-[#9B8B7E] uppercase tracking-wider">Durability</p>
         </div>
       </div>

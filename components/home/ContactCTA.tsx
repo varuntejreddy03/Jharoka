@@ -22,7 +22,7 @@ export default function ContactCTA() {
           <span className="text-jharoka-burgundy font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
             Experience Our Showroom
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-jharoka-burgundy-900 mb-6">
+          <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl font-medium text-jharoka-burgundy-900 mb-6">
             Visit our 5,000 sq ft <br className="hidden md:block" /> heritage showroom.
           </h2>
           <p className="text-jharoka-text-secondary max-w-xl mx-auto text-lg font-light leading-relaxed">
@@ -42,7 +42,7 @@ export default function ContactCTA() {
           >
             {/* Store Card */}
             <div className="bg-white p-10 rounded-sm shadow-[0_2px_40px_-12px_rgba(43,28,20,0.05)] border border-jharoka-burgundy/5">
-              <h3 className="font-serif text-2xl text-jharoka-burgundy-900 mb-8 flex items-center gap-3">
+              <h3 className="font-sans text-2xl text-jharoka-burgundy-900 mb-8 flex items-center gap-3">
                 <MapPin strokeWidth={1.5} className="w-6 h-6 text-jharoka-burgundy" />
                 Hyderabad Studio
               </h3>
@@ -69,7 +69,7 @@ export default function ContactCTA() {
             {/* Quick Contact & Hours */}
             <div className="grid sm:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-sm shadow-[0_2px_40px_-12px_rgba(43,28,20,0.05)] border border-jharoka-burgundy/5">
-                <h4 className="font-serif text-xl text-jharoka-burgundy-900 mb-6 flex items-center gap-3">
+                <h4 className="font-sans text-xl text-jharoka-burgundy-900 mb-6 flex items-center gap-3">
                   <Phone strokeWidth={1.5} className="w-5 h-5 text-jharoka-burgundy" /> Contact
                 </h4>
                 <div className="pl-8 space-y-4">
@@ -83,7 +83,7 @@ export default function ContactCTA() {
               </div>
 
               <div className="bg-white p-8 rounded-sm shadow-[0_2px_40px_-12px_rgba(43,28,20,0.05)] border border-jharoka-burgundy/5">
-                <h4 className="font-serif text-xl text-jharoka-burgundy-900 mb-6 flex items-center gap-3">
+                <h4 className="font-sans text-xl text-jharoka-burgundy-900 mb-6 flex items-center gap-3">
                   <Clock strokeWidth={1.5} className="w-5 h-5 text-jharoka-burgundy" /> Hours
                 </h4>
                 <div className="pl-8 text-jharoka-text-secondary font-light space-y-2">
@@ -102,7 +102,7 @@ export default function ContactCTA() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white p-10 lg:p-12 rounded-sm shadow-[0_2px_60px_-12px_rgba(43,28,20,0.08)] border border-jharoka-burgundy/5 h-full"
           >
-            <h3 className="font-serif text-3xl text-jharoka-burgundy-900 mb-2">Start a Conversation</h3>
+            <h3 className="font-sans text-3xl text-jharoka-burgundy-900 mb-2">Start a Conversation</h3>
             <p className="text-jharoka-text-secondary font-light mb-10">Use the form below to inquire about projects, products, or collaborations.</p>
 
             <form className="space-y-8">

@@ -21,7 +21,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
       <div className="bg-jharoka-cream min-h-screen">
         <Navbar />
         <main className="pt-32 text-center container-premium">
-          <h1 className="font-serif text-4xl text-jharoka-burgundy-900 mb-4">Product not found</h1>
+          <h1 className="font-sans text-4xl text-jharoka-burgundy-900 mb-4">Product not found</h1>
           <Link href="/collections" className="text-jharoka-burgundy hover:underline inline-flex items-center gap-2">
             <ChevronLeft className="w-4 h-4" />
             Back to Collections
@@ -76,7 +76,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
               <span className="text-jharoka-burgundy text-xs sm:text-sm font-medium tracking-[0.2em] uppercase mb-2 sm:mb-3 block">
                 {category?.name}
               </span>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-jharoka-burgundy-900 leading-tight">
+              <h1 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-light text-jharoka-burgundy-900 leading-tight">
                 {product.name}
               </h1>
             </motion.div>

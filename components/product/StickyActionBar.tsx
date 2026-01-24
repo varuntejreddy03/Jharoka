@@ -19,7 +19,7 @@ export default function StickyActionBar() {
       <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         <div>
           <p className="text-sm text-[#9B8B7E]">Heritage Platform Bed</p>
-          <p className="text-xl font-serif text-[#2C2420]">₹1,25,000</p>
+          <p className="text-xl font-sans text-[#2C2420]">₹1,25,000</p>
         </div>
         <div className="flex gap-3">
           <button className="bg-[#2C2420] text-[#FAF8F5] px-8 py-3 rounded-sm hover:bg-[#3D342E] transition text-sm tracking-wider uppercase">

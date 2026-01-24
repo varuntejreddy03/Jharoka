@@ -5,7 +5,7 @@ export default function LifestyleSection() {
     <section className="bg-white py-20">
       <div className="max-w-[1800px] mx-auto px-8">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl text-[#2C2420] mb-4">Imagine This in Your Home</h2>
+          <h2 className="font-sans text-4xl text-[#2C2420] mb-4">Imagine This in Your Home</h2>
           <p className="text-[#6B5D54] text-lg max-w-2xl mx-auto">
             More than furniture. A statement of refined taste and appreciation for timeless craftsmanship.
           </p>

@@ -82,7 +82,8 @@ npm run start
 - **Jan 2026**: UI/UX improvements
   - Simplified Hero to video-only arch display with play/pause and mute controls
   - Updated color palette with warmer browns (#2C1810, #8B4513, #D4A574)
-  - Changed heading font from Oswald to Playfair Display for elegance
+  - Changed all fonts to Inter (modern sans-serif) across entire site
+  - Improved mobile navbar with compact logo and cleaner layout
   - Added global utility classes for consistent styling (section-padding, section-header, btn-primary, etc.)
 - **Jan 2026**: Homepage redesign with category-first approach
   - Replaced FeaturedCollections carousel with CategoryCircles component

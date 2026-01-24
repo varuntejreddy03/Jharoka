@@ -48,7 +48,7 @@ export default function ServicesOverview() {
                 What We Do
               </span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+            <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
               Crafting
               <span className="block text-[#D4A574] italic font-light mt-2">Legacies</span>
             </h2>
@@ -65,15 +65,15 @@ export default function ServicesOverview() {
             className="grid grid-cols-3 gap-6 text-center"
           >
             <div>
-              <div className="text-4xl sm:text-5xl font-serif text-white mb-2">500+</div>
+              <div className="text-4xl sm:text-5xl font-sans text-white mb-2">500+</div>
               <div className="text-white/50 text-sm">Pieces Crafted</div>
             </div>
             <div>
-              <div className="text-4xl sm:text-5xl font-serif text-white mb-2">25+</div>
+              <div className="text-4xl sm:text-5xl font-sans text-white mb-2">25+</div>
               <div className="text-white/50 text-sm">Years Legacy</div>
             </div>
             <div>
-              <div className="text-4xl sm:text-5xl font-serif text-white mb-2">3</div>
+              <div className="text-4xl sm:text-5xl font-sans text-white mb-2">3</div>
               <div className="text-white/50 text-sm">Generations</div>
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ export default function ServicesOverview() {
                   <span className="text-[#D4A574] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                     0{index + 1}
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-white mb-3">
+                  <h3 className="font-sans text-2xl sm:text-3xl text-white mb-3">
                     {service.title}
                   </h3>
                   <p className="text-white/70 text-sm leading-relaxed">

@@ -105,7 +105,7 @@ export default function StoreTour() {
             <span className="text-[#8B5A2B] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
               The Experience
             </span>
-            <h2 className="font-serif text-4xl lg:text-5xl text-[#2C2420] mb-6 leading-none font-bold uppercase tracking-tighter">
+            <h2 className="font-sans text-4xl lg:text-5xl text-[#2C2420] mb-6 leading-none font-bold uppercase tracking-tighter">
               Step Inside Our <br /><span className="text-[#8B5A2B]">Sanctuary</span>
             </h2>
             <p className="text-[#6B5A4E] text-lg leading-relaxed font-light">

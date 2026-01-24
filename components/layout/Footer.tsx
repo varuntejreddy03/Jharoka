@@ -86,7 +86,7 @@ export default function Footer() {
                   />
                 </div>
                 <div>
-                  <span className="font-serif text-2xl font-bold">Jharoka</span>
+                  <span className="font-sans text-2xl font-bold">Jharoka</span>
                   <p className="text-white/70 text-xs tracking-[0.2em] uppercase">Heritage Furniture</p>
                 </div>
               </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="font-serif text-lg font-bold mb-6 text-white">Collections</h3>
+              <h3 className="font-sans text-lg font-bold mb-6 text-white">Collections</h3>
               <ul className="space-y-3">
                 {footerLinks.collections.map((link) => (
                   <li key={link.name}>
@@ -137,7 +137,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="font-serif text-lg font-bold mb-6 text-white">Services</h3>
+              <h3 className="font-sans text-lg font-bold mb-6 text-white">Services</h3>
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
@@ -159,7 +159,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <h3 className="font-serif text-lg font-bold mb-6 text-white">Company</h3>
+              <h3 className="font-sans text-lg font-bold mb-6 text-white">Company</h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
@@ -181,7 +181,7 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <h3 className="font-serif text-lg font-bold mb-6 text-white">Support</h3>
+              <h3 className="font-sans text-lg font-bold mb-6 text-white">Support</h3>
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.name}>
