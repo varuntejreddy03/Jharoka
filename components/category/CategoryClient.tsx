@@ -127,42 +127,59 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-14"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16"
         >
           {items.map((item, index) => (
             <motion.div
               key={`${item.type}-${item.src}`}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.8, 
-                delay: 0.5 + index * 0.1,
+                duration: 0.9, 
+                delay: 0.5 + index * 0.12,
                 ease: [0.22, 1, 0.36, 1]
               }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-[#F5F3F0] shadow-[0_4px_30px_rgba(44,24,16,0.08)] hover:shadow-[0_20px_60px_rgba(44,24,16,0.15)] transition-all duration-500 ease-out">
-                <Image
-                  src={item.src}
-                  alt={item.name}
-                  fill
-                  className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-[1.06]"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#D4A574]/10 via-transparent to-[#8B4513]/5 rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0a]/50 via-[#1a0f0a]/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                  <p className="text-white font-serif text-xl sm:text-2xl tracking-wide leading-tight">
-                    {item.name}
-                  </p>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#FAF8F5] to-[#F0EBE3]">
+                  <div className="absolute inset-[3px] rounded-[1.85rem] overflow-hidden bg-white shadow-[0_8px_40px_rgba(44,24,16,0.08)] group-hover:shadow-[0_25px_80px_rgba(44,24,16,0.18)] transition-shadow duration-700">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      fill
+                      className="object-cover transition-all duration-[1000ms] ease-out group-hover:scale-[1.08]"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0a]/70 via-[#1a0f0a]/0 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-600" />
+                    
+                    <div className="absolute inset-0 border-[3px] border-white/0 group-hover:border-white/20 rounded-[1.85rem] transition-all duration-500" />
+                    
+                    <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-10 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-600 ease-out">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-8 h-[1px] bg-[#D4A574]" />
+                        <span className="text-[#D4A574] text-[10px] font-semibold tracking-[0.3em] uppercase">
+                          View Details
+                        </span>
+                      </div>
+                      <p className="text-white font-serif text-xl sm:text-2xl tracking-wide leading-snug">
+                        {item.name}
+                      </p>
+                    </div>
+                  </div>
                 </div>
+                
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-[#2C1810]/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
               
-              <div className="mt-6 text-center">
-                <p className="font-serif text-lg sm:text-xl text-[#2C1810]/80 tracking-[0.02em] group-hover:text-[#8B4513] transition-colors duration-300">
+              <div className="mt-8 text-center">
+                <p className="font-serif text-xl text-[#2C1810]/80 tracking-[0.01em] group-hover:text-[#8B4513] transition-colors duration-400">
                   {item.name}
                 </p>
+                <div className="w-0 h-[1px] bg-[#D4A574] mx-auto mt-3 group-hover:w-12 transition-all duration-500" />
               </div>
             </motion.div>
           ))}
@@ -173,7 +190,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
-        className="text-center mt-24 sm:mt-32 pb-8"
+        className="text-center mt-28 sm:mt-36 pb-8"
       >
         <Link 
           href="/"
