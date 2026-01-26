@@ -40,7 +40,7 @@ function getOutputImages(slug: string): { src: string; name: string }[] {
     return files
       .filter(file => /\.(webp|png|jpg|jpeg)$/i.test(file))
       .map(file => ({
-        src: `/output/${encodeURIComponent(folderName)}/${encodeURIComponent(file)}`,
+        src: `/output/${folderName}/${file}`,
         name: formatImageName(file),
       }));
   } catch (error) {
