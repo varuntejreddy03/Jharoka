@@ -1,9 +1,10 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ChevronLeft, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, X, ChevronRight as ChevronRightIcon, ChevronLeft as ChevronLeftIcon, Sparkles } from "lucide-react";
 
 interface CategoryItem {
   src: string;
@@ -55,6 +56,49 @@ const itemVariants = {
 };
 
 export default function CategoryClient({ category, items }: CategoryClientProps) {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedImage === null) return;
+      
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+      } else if (e.key === 'ArrowRight') {
+        setSelectedImage((prev) => (prev !== null ? (prev + 1) % items.length : null));
+      } else if (e.key === 'ArrowLeft') {
+        setSelectedImage((prev) => (prev !== null ? (prev - 1 + items.length) % items.length : null));
+      }
+    };
+
+    if (selectedImage !== null) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImage, items.length]);
+
+  const openLightbox = (index: number) => {
+    setSelectedImage(index);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const goToNext = () => {
+    setSelectedImage((prev) => (prev !== null ? (prev + 1) % items.length : null));
+  };
+
+  const goToPrev = () => {
+    setSelectedImage((prev) => (prev !== null ? (prev - 1 + items.length) % items.length : null));
+  };
+
   return (
     <>
       <motion.div
@@ -178,7 +222,10 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
               {/* Mobile: Clean horizontal card */}
               <div className="sm:hidden">
                 <div className="relative flex gap-4 p-4 bg-white rounded-2xl shadow-[0_4px_24px_rgba(44,24,16,0.08)] border border-[#F0EBE3]">
-                  <div className="relative w-28 h-28 flex-shrink-0 rounded-xl overflow-hidden">
+                  <div 
+                    className="relative w-28 h-28 flex-shrink-0 rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-transform"
+                    onClick={() => openLightbox(index)}
+                  >
                     <Image
                       src={item.src}
                       alt={item.name}
@@ -194,7 +241,10 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
                     <h3 className="font-sans text-[#2C1810] text-base font-medium leading-snug mb-2 line-clamp-2">
                       {item.name}
                     </h3>
-                    <div className="flex items-center gap-2">
+                    <div 
+                      className="flex items-center gap-2 cursor-pointer"
+                      onClick={() => openLightbox(index)}
+                    >
                       <div className="w-6 h-[1px] bg-[#D4A574]/50" />
                       <span className="text-[10px] text-[#8B4513]/60 tracking-wider uppercase">
                         View
@@ -206,7 +256,10 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
 
               {/* Desktop: Premium vertical card */}
               <div className="hidden sm:block relative">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#FAF8F5] to-[#F0EBE3]">
+                <div 
+                  className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#FAF8F5] to-[#F0EBE3] cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
                   <div className="absolute inset-[3px] rounded-[1.85rem] overflow-hidden bg-white shadow-[0_8px_40px_rgba(44,24,16,0.08)] group-hover:shadow-[0_25px_80px_rgba(44,24,16,0.18)] transition-shadow duration-700">
                     <Image
                       src={item.src}
@@ -262,6 +315,81 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
           </span>
         </Link>
       </motion.div>
+
+      {/* Fullscreen Lightbox */}
+      <AnimatePresence>
+        {selectedImage !== null && items[selectedImage] && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+            onClick={closeLightbox}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-6 right-6 z-50 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Image Counter */}
+            <div className="absolute top-6 left-6 z-50 text-white/60 text-sm font-medium tracking-wider">
+              {selectedImage + 1} / {items.length}
+            </div>
+
+            {/* Previous Button */}
+            {items.length > 1 && (
+              <button
+                onClick={(e) => { e.stopPropagation(); goToPrev(); }}
+                className="absolute left-4 sm:left-8 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              >
+                <ChevronLeftIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+              </button>
+            )}
+
+            {/* Next Button */}
+            {items.length > 1 && (
+              <button
+                onClick={(e) => { e.stopPropagation(); goToNext(); }}
+                className="absolute right-4 sm:right-8 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              >
+                <ChevronRightIcon className="w-6 h-6 sm:w-7 sm:h-7" />
+              </button>
+            )}
+
+            {/* Main Image */}
+            <motion.div
+              key={selectedImage}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-[90vw] h-[80vh] max-w-6xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={items[selectedImage].src}
+                alt={items[selectedImage].name}
+                fill
+                className="object-contain"
+                sizes="90vw"
+                priority
+              />
+            </motion.div>
+
+            {/* Image Name */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-50 text-center">
+              <p className="text-white font-sans text-lg sm:text-xl font-light tracking-wide">
+                {items[selectedImage].name}
+              </p>
+              <div className="w-12 h-[1px] bg-[#D4A574] mx-auto mt-3" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
