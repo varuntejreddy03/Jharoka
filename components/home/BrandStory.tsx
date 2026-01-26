@@ -55,7 +55,7 @@ export default function BrandStory() {
           <span className="text-[#8B4513] text-[11px] font-semibold tracking-[0.4em] uppercase mb-6 block">
             Our Heritage
           </span>
-          <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-light text-[#2C1810] mb-6 tracking-tight">
+          <h2 className="font-[var(--font-bebas)] text-5xl sm:text-6xl lg:text-7xl text-[#2C1810] mb-6 tracking-wide uppercase">
             Crafting Legacy Since 1987
           </h2>
           <p className="text-lg text-[#5C4A3D]/60 max-w-2xl mx-auto font-light leading-relaxed">
@@ -117,8 +117,8 @@ export default function BrandStory() {
             className="space-y-8"
           >
             <div>
-              <h3 className="font-sans text-3xl sm:text-4xl font-light text-[#2C1810] mb-6 leading-tight">
-                Where Heritage Meets <span className="text-[#8B4513] italic">Artistry</span>
+              <h3 className="font-[var(--font-bebas)] text-4xl sm:text-5xl text-[#2C1810] mb-6 leading-tight tracking-wide uppercase">
+                Where Heritage Meets <span className="text-[#8B4513]">Artistry</span>
               </h3>
               <p className="text-[#5C4A3D]/70 text-lg leading-relaxed mb-6">
                 At Jharoka, we don't just make furniture — we preserve a legacy. Each piece 
@@ -199,7 +199,7 @@ export default function BrandStory() {
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#D4A574]/20 flex items-center justify-center">
                     <stat.icon className="w-5 h-5 text-[#D4A574]" />
                   </div>
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-2">
+                  <div className="font-[var(--font-bebas)] text-4xl sm:text-5xl lg:text-6xl text-white mb-2 tracking-wide">
                     {stat.number}
                   </div>
                   <div className="text-white/50 text-xs sm:text-sm tracking-wider uppercase">
