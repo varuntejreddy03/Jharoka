@@ -48,9 +48,9 @@ export default function ServicesOverview() {
                 What We Do
               </span>
             </div>
-            <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+            <h2 className="font-[var(--font-bebas)] text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-wide uppercase">
               Crafting
-              <span className="block text-[#D4A574] italic font-light mt-2">Legacies</span>
+              <span className="block text-[#D4A574] mt-2">Legacies</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed max-w-lg">
               Our integrated approach unites heritage craftsmanship with modern design sensibilities, creating furniture that becomes part of your story.
@@ -65,15 +65,15 @@ export default function ServicesOverview() {
             className="grid grid-cols-3 gap-6 text-center"
           >
             <div>
-              <div className="text-4xl sm:text-5xl font-sans text-white mb-2">500+</div>
+              <div className="text-4xl sm:text-5xl font-[var(--font-bebas)] text-white mb-2 tracking-wide">500+</div>
               <div className="text-white/50 text-sm">Pieces Crafted</div>
             </div>
             <div>
-              <div className="text-4xl sm:text-5xl font-sans text-white mb-2">25+</div>
+              <div className="text-4xl sm:text-5xl font-[var(--font-bebas)] text-white mb-2 tracking-wide">25+</div>
               <div className="text-white/50 text-sm">Years Legacy</div>
             </div>
             <div>
-              <div className="text-4xl sm:text-5xl font-sans text-white mb-2">3</div>
+              <div className="text-4xl sm:text-5xl font-[var(--font-bebas)] text-white mb-2 tracking-wide">3</div>
               <div className="text-white/50 text-sm">Generations</div>
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ export default function ServicesOverview() {
                   <span className="text-[#D4A574] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                     0{index + 1}
                   </span>
-                  <h3 className="font-sans text-2xl sm:text-3xl text-white mb-3">
+                  <h3 className="font-[var(--font-bebas)] text-3xl sm:text-4xl text-white mb-3 tracking-wide uppercase">
                     {service.title}
                   </h3>
                   <p className="text-white/70 text-sm leading-relaxed">

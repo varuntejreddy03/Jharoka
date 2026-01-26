@@ -26,7 +26,7 @@ export default function CategoryCircles() {
           <span className="inline-block text-[#8B4513] text-[11px] sm:text-xs font-semibold tracking-[0.4em] uppercase mb-6">
             Explore Our Range
           </span>
-          <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-light text-[#2C1810] mb-6 tracking-tight">
+          <h2 className="font-[var(--font-bebas)] text-5xl sm:text-6xl lg:text-7xl text-[#2C1810] mb-6 tracking-wide uppercase">
             Shop by Category
           </h2>
           <p className="text-base sm:text-lg text-[#5C4A3D]/60 max-w-lg mx-auto font-light">

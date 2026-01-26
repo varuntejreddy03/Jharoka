@@ -85,7 +85,7 @@ export default function Testimonials() {
             <CheckCircle2 className="w-3 h-3 text-[#34A853]" />
           </div>
 
-          <h2 className="font-sans text-3xl md:text-4xl text-white font-light leading-tight">
+          <h2 className="font-[var(--font-bebas)] text-4xl md:text-5xl text-white leading-tight tracking-wide uppercase">
             Trusted by Homeowners
           </h2>
           <p className="text-white/50 text-sm max-w-lg mx-auto">

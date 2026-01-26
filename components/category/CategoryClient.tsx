@@ -156,7 +156,7 @@ export default function CategoryClient({ category, items }: CategoryClientProps)
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-sans text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2C1810] mb-5 sm:mb-8 leading-[0.95] tracking-tight"
+            className="font-[var(--font-bebas)] text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-[#2C1810] mb-5 sm:mb-8 leading-[0.95] tracking-wide uppercase"
           >
             {category.name}
           </motion.h1>

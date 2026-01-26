@@ -52,7 +52,7 @@ export default function ContactSection() {
             Get In Touch
           </span>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-6 tracking-tight">
+          <h2 className="font-[var(--font-bebas)] text-5xl sm:text-6xl lg:text-7xl text-white mb-6 tracking-wide uppercase">
             Start Your Journey
           </h2>
           
