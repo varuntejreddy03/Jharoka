@@ -7,7 +7,7 @@ import categories from "@/data/categories.json";
 
 export default function CategoryCircles() {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section id="categories" className="py-24 lg:py-32 bg-white">
       <div className="container-premium">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -70,12 +70,12 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
-              <Link href="/collections" className="w-full sm:w-auto">
+              <a href="#categories" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-[#2C1810] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg hover:bg-[#8B4513] transition-all duration-300 flex items-center justify-center gap-3 group text-sm sm:text-base font-medium shadow-lg hover:shadow-xl">
                   Explore Collections
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </Link>
+              </a>
               <a 
                 href="https://www.google.com/maps/dir//Jharoka+-+Period+Furniture+Store,+Hyderabad" 
                 target="_blank"
