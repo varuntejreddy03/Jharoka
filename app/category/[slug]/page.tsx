@@ -9,6 +9,12 @@ import categories from "@/data/categories.json";
 import products from "@/data/products.json";
 import CategoryClient from "@/components/category/CategoryClient";
 
+export function generateStaticParams() {
+  return categories.map((category) => ({
+    slug: category.slug,
+  }));
+}
+
 const folderMap: { [key: string]: string } = {
   "sofas": "Sofas",
   "chairs": "Chairs",
